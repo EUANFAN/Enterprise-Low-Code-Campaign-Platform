@@ -1,0 +1,10 @@
+{
+  "verbose": true,
+  "delay": 1000,
+  "execMap": {
+    "js": "babel-node  --config-file ./.babelrc "
+  },
+  "ext": "js, json",
+  "ignore": ["node_modules", "dist"],
+  "watch": ["server"]
+}

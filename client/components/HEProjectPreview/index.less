@@ -1,0 +1,77 @@
+@import '~common/style/constants.less';
+.project-preview-modal {
+  width: 834px;
+  height: 620px;
+  max-width: 80%;
+  line-height: 1.5;
+  font-size: 14px;
+  &__title {
+    background-color: #f5f7fa;
+    border-bottom: 1px solid #e2e6ed;
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+  &__content {
+    padding: 25px;
+    display: flex;
+    height: 550px;
+
+    &__iframe {
+      border: 1px solid #ddd;
+      background-color: #f5f7fa;
+      box-sizing: content-box;
+    }
+    &__info {
+      flex: 1;
+      text-align: left;
+      margin-left: 30px;
+
+      dl {
+        display: flex;
+        margin-bottom: 8px;
+        font-size: 14px;
+        dt {
+          font-weight: 400;
+          color: @grey--icon-color;
+          width: 120px;
+        }
+        dd {
+          flex: 3;
+          white-space: normal;
+          justify-content: left;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 120px;
+          margin-bottom: 5px;
+          color: @grey--normal-text;
+          position: relative;
+        }
+        .project-url {
+          color: @blue--xes-darken;
+          width: 68%;
+          word-break: break-word;
+          word-wrap: break-word;
+          display: inline-block;
+          vertical-align: top;
+          &__copy {
+            position: absolute;
+            right: 0;
+            cursor: pointer;
+            color: @grey--normal-text;
+            .icon-fuzhi {
+              color: #adb4be;
+              margin-right: 8px;
+            }
+          }
+        }
+      }
+    }
+    &__qrcode-section {
+      canvas {
+        background-color: #adb4be;
+        margin: 5px 0 12px 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import '~common/style/constants.less';
+
+.he-hidden-button {
+  color: @blue--xes-darken;
+  cursor: pointer;
+  user-select: none;
+  font-size: 12px;
+  margin: 0;
+  border: none;
+  -webkit-appearance: none;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &:hover {
+    color: fade(@blue--xes-darken, 75);
+  }
+}

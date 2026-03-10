@@ -1,0 +1,48 @@
+@import '~common/style/constants.less';
+
+.he-imgUpload {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  background-size: 100%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  overflow: hidden;
+  .widget-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    line-height: 0;
+    transform: translate(-50%, -50%);
+    -o-object-fit: contain;
+    object-fit: contain;
+    top: 50%;
+    left: 50%;
+  }
+  &__mask {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    &--icon {
+      position: absolute;
+      top: 53%;
+      left: 50%;
+      width: 30%;
+      transform: translate(-50%, -50%);
+      fill: #fff;
+    }
+  }
+
+  &:hover {
+    .he-imgUpload__mask {
+      display: flex;
+    }
+  }
+}

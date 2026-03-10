@@ -1,0 +1,28 @@
+@import '~common/style/constants.less';
+
+.he-floating-button {
+  cursor: pointer;
+  user-select: none;
+  line-height: 1;
+  margin: 0;
+  border: none;
+  -webkit-appearance: none;
+  outline: none;
+  background-color: #fff;
+  color: #4a82f7;
+  fill: #4a82f7;
+  border-radius: 6px;
+
+  font-size: 14px;
+
+  &:disabled {
+    cursor: default;
+    color: @grey--icon-color;
+    fill: @grey--icon-color;
+  }
+
+  &&--selected {
+    color: @blue--xes;
+    fill: @blue--xes;
+  }
+}

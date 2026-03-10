@@ -1,0 +1,138 @@
+// Import colors
+@import '~common/style/constants.less';
+
+.project-card {
+  position: relative;
+  z-index: 2;
+
+  &__review__status {
+    position: absolute;
+    right: 16px;
+    top: 0;
+    font-size: 12px;
+    color: #ffffff;
+    background: #ffbb4c;
+    line-height: 26px;
+    text-align: center;
+    z-index: 1;
+    width: 48px;
+    height: 26px;
+    box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 0px 0px 12px 12px;
+    &__type {
+      position: absolute;
+      background-color: #f13232;
+      color: #fff;
+      font-size: 12px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      z-index: 2;
+      right: 1px;
+      bottom: -10px;
+      text-align: center;
+      span {
+        position: absolute;
+        transform: scale(0.8);
+        right: 3px;
+        top: -1px;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+
+    &__frame {
+      width: 208px;
+      height: 208px;
+
+      &__media {
+        position: relative;
+        width: 100%;
+        line-height: 0;
+
+        &--audio {
+          fill: @grey--support-text;
+        }
+
+        &--video {
+          position: relative;
+
+          video {
+            width: 100%;
+          }
+
+          &-overlay {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+
+            .icon {
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+      }
+    }
+
+    &__partner {
+      position: absolute;
+      width: 40px;
+      height: 18px;
+      right: 0;
+      bottom: 60px;
+      border-radius: 10px 0 0 0;
+      color: @blue--xes-darken;
+      background: rgba(255, 255, 255, 1);
+      cursor: pointer;
+      &__icon {
+        width: 16px;
+      }
+      &__num {
+        display: flex;
+        justify-content: space-evenly;
+      }
+    }
+  }
+
+  &__actions {
+    color: @grey--support-text;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    height: 62px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    align-items: center;
+
+    &__button-group {
+      flex: 1;
+    }
+
+    &__main-action {
+      margin-left: 10px;
+    }
+  }
+
+  &__shadow {
+    position: absolute;
+    width: 208px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px 0px rgba(173, 180, 190, 0.24);
+    bottom: 0px;
+    z-index: 1;
+  }
+}

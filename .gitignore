@@ -1,0 +1,30 @@
+output
+node_modules
+server/node_modules
+.DS_Store
+npm-debug.log
+.vscode
+.idea
+dump.rdb
+**/yarn-error.log
+nohup.out
+flow-typed/npm/*
+
+# deploy temporary files
+dist
+
+# ignore generated document
+doc/**/_book/*
+doc/dist/*
+
+# ignore dynamic generated document summary markdown
+doc/gitbook/SUMMARY.md
+
+# test coverage
+coverage/*
+
+volumes/mongo/*
+volumes/redis/*
+
+.history
+```

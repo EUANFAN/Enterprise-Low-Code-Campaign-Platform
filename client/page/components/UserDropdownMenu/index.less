@@ -1,0 +1,70 @@
+@import '~common/style/constants.less';
+
+.user-dropdown-menu {
+  position: relative;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+
+  &__trigger {
+    transition: opacity 0.6s;
+    width: 100%;
+    display: flex;
+
+    &__text {
+      flex: 1;
+      text-align: right;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow-x: hidden;
+    }
+
+    &.he-link .he-link__arrow-container {
+      transition: transform 0.3s;
+    }
+
+    &.he-link:hover .he-link__arrow-container {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__actions {
+    position: absolute;
+    top: 40px;
+    width: 120px;
+    background: #fff;
+    border: 1px solid @grey--divider;
+    border-radius: 6px 6px;
+    left: 8px;
+    opacity: 0;
+    transition: opacity 0.6s, transform 0.6s;
+
+    &__item {
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid @grey--divider;
+      cursor: pointer;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+
+      &:hover {
+        background: @grey--divider;
+      }
+
+      &:active {
+        color: @blue--xes;
+      }
+    }
+  }
+}
+
+.he-navbar__right-part:hover {
+  .user-dropdown-menu__actions {
+    transform: translateX(-8px);
+    opacity: 1;
+  }
+}

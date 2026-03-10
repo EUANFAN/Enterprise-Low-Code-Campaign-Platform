@@ -1,0 +1,66 @@
+.settings-panel {
+  width: 360px;
+  height: 100%;
+  border-left: solid 1px #d9d9d9;
+  z-index: 1;
+  background: #fff;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .ant-tabs {
+    position: absolute;
+    top: 44px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    &-bar {
+      border: none;
+      background-color: #fff;
+    }
+
+    .ant-tabs-content {
+      position: absolute;
+      top: 35px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+
+      .ant-tabs-tabpane {
+        position: absolute;
+        top: 0;
+        overflow: auto;
+        height: 100%;
+
+        &::-webkit-scrollbar {
+          width: 0;
+          height: 0;
+        }
+      }
+    }
+    .ant-tabs-nav {
+      .ant-tabs-tab {
+        margin: 0 5px 0 0;
+      }
+    }
+  }
+
+  .multi-select-panel {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: dashed 1px #ccc;
+    text-align: center;
+    width: 200px;
+    margin-left: -100px;
+    height: 100px;
+    line-height: 100px;
+    margin-top: -50px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}

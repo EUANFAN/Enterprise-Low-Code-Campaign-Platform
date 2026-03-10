@@ -1,0 +1,13 @@
+const execCommand ='var execCommandWrap=function(){"use strict";function e(e,n,r){return"object"!=typeof e||t(n).reduce(((e,t,n,c)=>n===c.length-1?(e[t]=r,null):(t in e||(e[t]=/^[0-9]{1,}$/.test(c[n+1])?[]:{}),e[t])),e),e}function t(e){return Array.isArray(e)?e:e.replace(/\[/g,".").replace(/\]/g,"").split(".")}const n=(e,t=(()=>{}))=>{for(let n in e)e.hasOwnProperty(n)&&t(e[n],n)},r=e=>{switch(e){case"FilePicker":return"";case"Radio":case"RadioButton":return"1";case"NormalText":return"";case"InputNumber":return 0;case"RichText":return"";case"Slider":return 0;case"AssembleList":return[];case"MultipleSelect":return["1"];case"Select":return"1";case"CheckBox":return["1"];case"Set":return{Set_1:{clickid:"0.1"}};default:return""}},c=function(c={},...o){const i=o.reduce(((r,c)=>(n(c,((c,o)=>{switch(o){case"config":n(c,((n,c)=>{if("object"==typeof n){const a=(s=[o,c],u={},"object"!=typeof(i=r)?u:t(s).reduce(((e,t)=>(e||{})[t]),i)||u);e(r,[o,c],Object.assign({},a,n))}var i,s,u}));break;case"data":n(c,((t,n)=>{e(r,[o,n],t)}))}})),r)),c),s=i.data;return n(i.config,((e,t)=>{Object.keys(e).length>0?null==e.type?n(e,((e,t)=>{null==s[t]&&(s[t]=s[t]||r(e.type))})):s[t]=s[t]||r(e.type):delete i.config[t]})),i};return(e={})=>{let t={};function n(o){const i=[],s=[],u={exports:{config:{}}};function a(r=""){if(t[r])return t[r];const c=e.editorMap;let o=r.split("/").shift();if(o.startsWith("@")){o=o.slice(1);const e=r.split("/").slice(1).join("/"),i=c[o][e];if(e.endsWith(".json")){if("string"==typeof i)try{t[r]=new Function(`return ${i}`)()}catch(e){t[r]=JSON.parse(i)}else t[r]=i;return t[r]}return t[r]=n(c[o][e]),t[r]}}try{new Function("module","daPeng_require","AutoAddExternalComponent","AutoAddInternalComponent",`${o}`)(u,a,(function(e=""){const t=(({type:e,config:t,data:n})=>({config:t,data:n}))(a(e));s.push(t)}),(function(e={config:{}}){i.push(e)}));const e={data:u.exports.data,config:u.exports.config},t=[...s,...i,e];return function(e,t={}){e.forEach((({data:e})=>{if(null!=e)for(let n in e)null!=t[n]&&r.repetitiveKeys.push(n),t[n]=!0}))}(t),u.exports=c(u.exports,...t),u.exports}catch(e){return console.log("预览错误:",e),u.exports}}function r(...e){r.repetitiveKeys=[];const c=n(...e);return t={},c}return r.repetitiveKeys=[],r}}();';
+export const wrapCustomComponent = (code, type, version) => {
+  return `(function (w) {
+    ${execCommand}
+    const type = '${type}-${version}';
+    ${code};
+    const execCommand = execCommandWrap(DAPENG_INJECT_DATA);
+    if(w.__components__==null){
+        w.__components__={};
+    }
+    w.__components__[type] = execCommand(DAPENG_INJECT_DATA.editorMap.${type}['index.js']);
+  })(window)`;
+};

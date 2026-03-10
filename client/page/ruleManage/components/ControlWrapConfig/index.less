@@ -1,0 +1,49 @@
+.config_wrap_body {
+    width: 100%;
+    min-width: 600px;
+    max-width: 700px;
+    padding-left: 25px;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    &--box {
+      .ant-select-selection__rendered {
+        position: relative;
+        display: block;
+        margin-right: 27px;
+        margin-left: 11px;
+        line-height: 30px;
+      }
+    }
+    .assemble-list-container {
+      padding: 0 0px;
+      margin: 30px 0;
+    }
+
+    .controlWrap-item {
+      border: solid 1px #d9d9d9;
+      border-radius: 3px;
+      padding: 20px;
+    }
+
+    .controlWrap-title {
+      height: 25px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #1890FF;
+      line-height: 25px;
+      margin: 30px 0;
+      transform: translateX(-5px);
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background: #1890FF;
+        border-radius: 50%;
+        border: 1px solid;
+        transform: translate(-70%, -30%);
+
+      }
+    }
+  }

@@ -1,0 +1,99 @@
+@border-color: #ccc;
+@point-width: 7px;
+@point-height: 7px;
+
+.workspace {
+  -webkit-user-select: none;
+  user-select: none;
+  flex: 1;
+  position: relative;
+  // background-color: #f3f3f3;
+  font-size: 13px;
+  overflow: hidden;
+  height: 100%;
+
+  .canvasW {
+    position: absolute;
+    top: 0;
+    width: 3600px;
+    z-index: 1;
+  }
+  .viewport-container {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    .canvasH {
+      position: absolute;
+      z-index: 1;
+    }
+    .corner {
+      position: absolute;
+      left: 0px;
+      top: -15px;
+      width: 16px;
+      height: 16px;
+      pointer-events: auto;
+      cursor: pointer;
+      box-sizing: content-box;
+      border-right: 1px solid rgb(218, 218, 220);
+      border-bottom: 1px solid rgb(218, 218, 220);
+      transition: all 0.2s ease-in-out 0s;
+      background: #f8f8f8;
+      z-index: 2;
+    }
+  }
+
+  .viewport {
+    margin: 100px 0;
+    position: relative;
+    margin-left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .navigator-list {
+    position: absolute;
+    left: 0;
+    top: -30px;
+    line-height: 30px;
+    text-align: left;
+    color: #666;
+    padding-left: 1px;
+    min-width: 375px;
+    .navigator-item {
+      display: inline-block;
+
+      .navigator-item-text {
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .return-btn {
+    position: absolute;
+    left: 0;
+    top: -60px;
+    height: 30px;
+    width: 100%;
+    line-height: 30px;
+    text-align: center;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #666;
+    background: none;
+  }
+
+  .react-swipeable-view-container > div {
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+}

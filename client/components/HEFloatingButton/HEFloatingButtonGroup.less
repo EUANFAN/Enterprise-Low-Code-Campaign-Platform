@@ -1,0 +1,38 @@
+.he-floating-button-group {
+  display: flex;
+
+  .he-floating-button {
+    padding: 12px;
+  }
+
+  &--horizontal {
+    .he-floating-button {
+      &:not(:first-child) {
+        border-bottom-left-radius: none;
+        border-top-left-radius: none;
+      }
+      &:not(:last-child) {
+        border-bottom-right-radius: none;
+        border-top-right-radius: none;
+        border-right: none;
+      }
+    }
+  }
+
+  &--vertical {
+    flex-direction: column;
+
+    .he-floating-button {
+      &:not(:first-child) {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+
+      &:not(:last-child) {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom: none;
+      }
+    }
+  }
+}

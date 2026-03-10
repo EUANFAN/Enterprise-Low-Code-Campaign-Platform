@@ -1,0 +1,25 @@
+@import '../../common//style/constants.less';
+
+.loading-icon use {
+  animation-name: loading-fading;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+
+  .loop(12);
+}
+.loop(@nth) when (@nth > 0) {
+  .loop((@nth - 1));
+  &:nth-child(@{nth}) {
+    animation-delay: 0.3s - @nth * 0.1;
+    transform: rotateZ(@nth * 30deg);
+  }
+}
+@keyframes loading-fading {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.1;
+  }
+}

@@ -1,0 +1,133 @@
+@import '~common/style/constants.less';
+.theme-card {
+  position: relative;
+  z-index: 2;
+  &-container {
+    position: relative;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    overflow: hidden;
+    &__frame {
+      width: 208px;
+      height: 217px;
+    }
+  }
+  &__actions {
+    width: 100%;
+    height: 53px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    .theme-card__actions-title {
+      width: 100%;
+      font-size: 14px;
+      color: #393838;
+      text-align: left;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .theme-card__actions-desc {
+      width: 100%;
+      font-size: 10px;
+      color: #ababab;
+      display: flex;
+      justify-content: flex-end;
+      .theme-card__actions-hot-icon {
+        width: 16px;
+        height: 17px;
+        margin-right: 4px;
+      }
+    }
+  }
+
+  &__theme-right {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    z-index: 2;
+    background: #e02727;
+    color: #fff;
+    text-align: center;
+    width: 66px;
+    height: 25px !important;
+    line-height: 23px !important;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-size: 12px;
+  }
+  &__theme-top {
+    position: absolute;
+    left: -4px;
+    top: -2px;
+    width: 71px;
+    height: 36px;
+  }
+}
+.theme-card-mask-wrapper {
+  width: 208px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 9px 0px rgba(198, 198, 198, 0.8);
+  border-radius: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .theme-card-mask-collect {
+    width: 17px;
+    height: 16px;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    cursor: pointer;
+    img {
+      width: 17px;
+      height: 16px;
+    }
+  }
+  .theme-card-mask-preview {
+    font-size: 10px;
+    margin: 0 8px;
+    color: #ffffff;
+    cursor: pointer;
+    img {
+      width: 27px;
+      height: 22px;
+      display: block;
+      margin-bottom: 3px;
+    }
+  }
+  .theme-card-mask-applay {
+    font-size: 10px;
+    margin: 0 8px;
+    color: #ffffff;
+    cursor: pointer;
+    img {
+      width: 20px;
+      height: 22px;
+      display: block;
+      margin-bottom: 3px;
+    }
+  }
+  .theme-card-mask-more {
+    font-size: 10px;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 0 8px;
+    img {
+      width: 22px;
+      height: 22px;
+      display: block;
+      margin-bottom: 3px;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "checkJs": false /* Report errors in .js files. */,
+    "target": "es5",
+    "module": "commonjs",
+    "jsx": "react",
+    "baseUrl": "./client" /* Base directory to resolve non-absolute module names. */,
+    "paths": {
+      "@": ["./client/*"],
+      "apis": ["./client/apis/*"],
+      "common": ["./client/common/*"],
+      "components": ["./client/components/*"],
+      "store": ["./client/store/*"],
+      "state": ["./client/state/*"],
+      "static": ["./client/static/*"],
+      "widgets": ["./client/widgets/*"],
+      "triggers": ["./client/triggers/*"],
+      "controls": ["./client/controls/*"],
+      "base": ["./client/base/*"],
+      "utils": ["./client/utils/*"],
+      "globals": ["./client/globals/*"],
+      "defaultData": ["./client/defaultData/*"],
+      "react-dom/server": [
+        "node_modules/react-dom/umd/react-dom-server.browser.production.min.js"
+      ]
+    },
+    "lib": ["es5", "es6", "dom"],
+    "esModuleInterop": true /* 允许 export = xxx 导出 ，并使用 import xxx form "module-name" 导入*/,
+    "experimentalDecorators": true /* 启用装饰器 */,
+    "emitDecoratorMetadata": true
+  },
+  "include": ["client"],
+  "exclude": ["node_modues"]
+}

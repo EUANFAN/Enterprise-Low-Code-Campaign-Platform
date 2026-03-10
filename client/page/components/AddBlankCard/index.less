@@ -1,0 +1,31 @@
+@import '~common/style/constants.less';
+
+.add-blank-card {
+  width: 188px;
+  height: 346px;
+  padding: 14px;
+  cursor: pointer;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    height: 100%;
+    background-color: @grey--page-grey;
+    border: 1px solid @grey--divider;
+
+    &__icon {
+      width: 57px;
+      user-select: none;
+    }
+
+    &__desc {
+      margin-top: 20px;
+      color: @grey--support-text;
+      font-size: 14px;
+      user-select: none;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@blue--xes: #ffffff;
+@blue--xes-darken: #4a82f7;
+
+@grey--normal-text: #333;
+@grey--function-line-hover: #666;
+@grey--background: #fff;
+@grey--background-hover:rgba (229, 237, 254, 0.6);
+@grey--support-text: #999;
+@grey--function-line: #d6d6d6;
+@grey--divider: rgba(229, 237, 254, 0.6); // #f0f0f0
+@grey--page-grey: #f5f7fa; // #f9f9f9
+@grey--icon-color: #666666;
+
+.loop(@mixin, @count) when (@count > 0) {
+  @mixin ();
+  .mapper(@count);
+  .loop(@mixin, @count - 1);
+}

@@ -1,0 +1,84 @@
+.stage-list {
+  height: 100%;
+  width: 100px;
+  background: #fff;
+  border-right: solid 1px #d9d9d9;
+  z-index: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .stage-item,
+  .stage-add,
+  .dragged {
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow: none !important;
+    border: solid 1px #d9d9d9;
+    color: rgba(0, 0, 0, 0.65);
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    display: flex;
+    text-align: center;
+    align-items: center;
+
+    .stage {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      text-align: center;
+      align-items: center;
+    }
+
+    span {
+      width: 100%;
+      flex: 1;
+      word-wrap: break-word;
+    }
+
+    .close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 5px;
+      font-size: 12px;
+      display: none;
+      color: rgba(0, 0, 0, 0.65);
+    }
+  }
+
+  .stage-item:hover {
+    border: solid 1px #53bb9a;
+
+    .close {
+      display: block;
+    }
+  }
+
+  .stage-item.placeholder {
+    border: dotted 1px #d9d9d9;
+    color: #fff;
+  }
+
+  .stage-add {
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+
+    &:hover {
+      border: solid 1px #53bb9a;
+    }
+  }
+
+  .stage-item-selected {
+    background-color: #fff;
+    border: solid 1px #53bb9a;
+    color: #53bb9a;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}

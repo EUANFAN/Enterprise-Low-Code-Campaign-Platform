@@ -1,0 +1,42 @@
+@import '~common/style/constants.less';
+
+.widget-info-modal {
+  user-select: none;
+
+  &__content {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0px;
+    &__row {
+      display: flex;
+      padding: 0 60px;
+      align-items: center;
+      width: 100%;
+      min-height: 38px;
+
+      &:not(:first-child) {
+        margin-top: 10px;
+      }
+
+      &__label {
+        color: @grey--support-text;
+        display: inline-block;
+        width: 70px;
+        margin-right: 20px;
+      }
+
+      &__input {
+        width: 280px;
+      }
+      .he-radio-group__radio {
+        width: 140px;
+      }
+
+      .he-radio-group__radio:not(:first-child) {
+        margin-left: 0px;
+      }
+    }
+  }
+}

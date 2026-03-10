@@ -1,0 +1,32 @@
+@import '~common/style/constants.less';
+
+@keyframes he-loading-string-translate {
+  0% {
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.he-loading-string {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+
+  &::after {
+    content: ' ';
+    display: block;
+    width: 600%;
+    height: 100%;
+    background-image: linear-gradient(
+      to right,
+      @grey--function-line 30%,
+      @grey--page-grey 45%,
+      @grey--function-line 47%,
+      @grey--function-line 80%,
+      @grey--page-grey 95%,
+      @grey--function-line 97%
+    );
+    animation: he-loading-string-translate 2s infinite;
+  }
+}

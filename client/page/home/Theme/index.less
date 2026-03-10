@@ -1,0 +1,38 @@
+@import '~common/style/constants.less';
+
+.h5-theme-resource {
+  position: absolute;
+  background-color: @grey--page-grey;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  // padding: 40px 0;
+  flex-direction: column;
+  align-items: center;
+  &__container {
+    width: 1000px;
+
+    &__title {
+      display: flex;
+      margin-bottom: 15px;
+      justify-content: space-between;
+      align-items: center;
+      color: @grey--support-text;
+      font-size: 14px;
+
+      .button {
+        color: @grey--support-text;
+        width: 60px;
+        height: 30px;
+        border-radius: 15px;
+        border: 1px solid @grey--function-line;
+      }
+    }
+    &__content {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      align-content: flex-start;
+    }
+  }
+}

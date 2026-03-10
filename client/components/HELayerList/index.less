@@ -1,0 +1,131 @@
+@import '~common/style/constants.less';
+
+.layers-title {
+  line-height: 33px;
+  padding-left: 10px;
+  background-color: #efefef;
+  margin-bottom: 10px;
+}
+
+.layer-item {
+  border: solid 1px #ccc;
+  box-shadow: none !important;
+  overflow: hidden;
+  height: 40px;
+  width: 100%;
+  line-height: 40px;
+  background-color: #fff;
+  margin-bottom: 10px;
+  display: flex;
+
+  .layer-item-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+    .status {
+      width: 45px;
+      background-color: #f1f1f1;
+      border-right: solid 1px #ccc;
+      text-align: center;
+      .visible,
+      .visible-disable {
+        font-size: 14px;
+        display: inline-block;
+        margin-top: 12px;
+        cursor: pointer;
+      }
+      .visible-disable {
+        color: #ccc;
+      }
+    }
+
+    .layer-name {
+      margin-left: 10px;
+      flex: 1;
+      cursor: pointer;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-break: break-all;
+    }
+  }
+}
+
+.layer-item-selected {
+  border-color: @blue--xes-darken;
+}
+
+.layer-item.placeholder {
+  border: dotted 1px #ccc;
+}
+
+.layer-list {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.move-operation-content {
+  display: none;
+  right: 0px;
+  transform: translateY(0);
+  top: 9px;
+  width: 50px;
+  height: 20px;
+  background: transparent;
+  .move-arrow {
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background: transparent;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 16px;
+  }
+  .move-arrow-up {
+    left: 0;
+  }
+  .move-arrow-down {
+    left: 25px;
+  }
+}
+.layer-item:hover {
+  .move-operation-content {
+    display: block;
+    .move-arrow {
+      &:hover {
+        color: #4a82f7;
+      }
+    }
+  }
+  .layer-name {
+    padding-right: 50px;
+  }
+}
+.layer-item:first-child {
+  .move-arrow-up {
+    cursor: not-allowed;
+  }
+  &:hover {
+    .move-arrow-up {
+      color: #ccc;
+      &:hover {
+        color: #ccc;
+      }
+    }
+  }
+}
+.layer-item:last-child {
+  .move-arrow-down {
+    cursor: not-allowed;
+  }
+  &:hover {
+    .move-arrow-down {
+      color: #ccc;
+      &:hover {
+        color: #ccc;
+      }
+    }
+  }
+}

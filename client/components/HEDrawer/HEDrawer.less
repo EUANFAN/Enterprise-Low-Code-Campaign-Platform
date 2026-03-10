@@ -1,0 +1,60 @@
+@import '~common/style/constants.less';
+
+.he-drawer {
+  position: relative;
+  z-index: 2 !important;
+  width: 220px;
+  min-width: 220px;
+  background-color: #fff !important;
+  color: @grey--normal-text!important;
+  font-size: 14px;
+  padding-bottom: 62px;
+  &__footer {
+    height: 62px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 36px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    &__item {
+      cursor: pointer;
+      &__icon {
+        color: rgba(173, 180, 190, 0.6);
+        margin-right: 7px;
+      }
+    }
+    &__item__suggestion {
+      &-content {
+        display: none;
+        position: absolute;
+        left: 10px;
+        bottom: 50px;
+        background-color: #fff;
+        border-radius: 4px;
+        box-sizing: border-box;
+        box-shadow: 0 2px 8px 0 rgba(173, 180, 190, 0.24);
+        padding: 10px;
+        z-index: 2;
+        text-align: center;
+        img {
+          width: 150px;
+          height: 150px;
+          margin-bottom: 6px;
+        }
+        div {
+          height: 21px;
+          line-height: 21px;
+        }
+      }
+      &:hover {
+        .he-drawer__footer__item__suggestion-content {
+          display: block;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,134 @@
+// Import colors
+@import '~common/style/constants.less';
+
+.resource-card {
+  z-index: 1;
+  &__mask {
+    position: absolute;
+    width: 208px;
+    height: 226px;
+    border-radius: 10px;
+    z-index: 99;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(rgba(0, 0, 0, 0)),
+      color-stop(31%, rgba(0, 0, 0, 0.05)),
+      color-stop(48%, rgba(0, 0, 0, 0.1)),
+      color-stop(66%, rgba(0, 0, 0, 0.2)),
+      color-stop(88%, rgba(0, 0, 0, 0.3)),
+      color-stop(95%, rgba(0, 0, 0, 0.35)),
+      color-stop(99%, rgba(0, 0, 0, 0.4))
+    );
+    background-image: -o-linear-gradient(
+      top,
+      rgba(0, 0, 0, 0) 0,
+      rgba(0, 0, 0, 0.05) 31%,
+      rgba(0, 0, 0, 0.1) 48%,
+      rgba(0, 0, 0, 0.2) 66%,
+      rgba(0, 0, 0, 0.3) 88%,
+      rgba(0, 0, 0, 0.35) 95%,
+      rgba(0, 0, 0, 0.4) 99%
+    );
+    background-image: linear-gradient(
+      -180deg,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.05) 31%,
+      rgba(0, 0, 0, 0.1) 48%,
+      rgba(0, 0, 0, 0.2) 66%,
+      rgba(0, 0, 0, 0.3) 88%,
+      rgba(0, 0, 0, 0.35) 95%,
+      rgba(0, 0, 0, 0.4) 99%
+    );
+    &--preview {
+      position: absolute;
+      color: #ffff;
+      bottom: 10px;
+      right: 20px;
+    }
+    svg {
+      fill: #ffff;
+    }
+  }
+  &__shadow {
+    position: absolute;
+    width: 208px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px 0px rgba(173, 180, 190, 0.24);
+    bottom: 0px;
+    z-index: 0;
+  }
+  &__content {
+    &__frame {
+      width: 208px;
+      height: 208px;
+      overflow: hidden;
+
+      &__media {
+        position: relative;
+        width: 100%;
+        line-height: 0;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+
+        &--audio {
+          fill: @grey--support-text;
+        }
+
+        &--video {
+          position: relative;
+          video {
+            width: 100%;
+          }
+
+          &-overlay {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+
+            .icon {
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
+
+        &--folder {
+          padding: 10px;
+          color: #999;
+        }
+      }
+      &__file {
+        position: relative;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+      }
+      &--list {
+        // background: @grey--function-line-hover;
+        background: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
+  &__actions {
+    &__button-group {
+      flex: 1;
+    }
+
+    &__main-action {
+      margin-left: 10px;
+    }
+  }
+}
+.he-modal .resource-card__content__frame {
+  height: 170px !important;
+}

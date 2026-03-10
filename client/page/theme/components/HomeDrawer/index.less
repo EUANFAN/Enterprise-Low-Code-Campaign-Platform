@@ -1,0 +1,205 @@
+.he-drawer {
+  text-align: center;
+  padding-top: 25px;
+  .he-drawer-section {
+    &__popular {
+      // max-height: 800px;
+      max-height: calc(~'100% - 160px');
+      // overflow-y: scroll;
+      height: 100%;
+    }
+
+    &__popular-item {
+      text-align: left;
+      // margin-bottom: 17px;
+      height: 36px;
+      line-height: 36px;
+      transition: all 0.3s;
+      padding: 0 25px;
+      cursor: pointer;
+      &:hover {
+        background-color: #f0f7ff;
+      }
+      &__selected {
+        background-color: #e5edfe;
+      }
+      &__icon {
+        font-size: 14px;
+        color: #4a82f7;
+        margin-right: 8px;
+      }
+      &__top {
+        width: 172px;
+        height: 1px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        background-color: #f9f9fa;
+      }
+      &__bottom {
+        width: 172px;
+        height: 1px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        background-color: #f9f9fa;
+      }
+      &__scroll {
+        overflow-y: scroll;
+        max-height: calc(~'100% - 80px');
+        margin-bottom: 20px;
+      }
+    }
+    &__popular-bottom {
+      width: 100%;
+      &__btn {
+        .he-button {
+          width: 180px;
+        }
+        &:first-child {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    // 审核css
+    &__examine-bottom {
+      width: 100%;
+      margin-top: 20px;
+      position: relative;
+      &__btn {
+        .he-button {
+          width: 180px;
+        }
+      }
+      &-tip {
+        font-size: 12px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 1px solid #4a82f7;
+        color: #4a82f7;
+        background: #fff;
+        position: absolute;
+        top: -7px;
+        right: 10px;
+      }
+    }
+    &__container {
+      text-align: left;
+      padding: 0 10px 0 20px;
+      &__bar {
+        width: 100%;
+        min-height: 34px;
+        display: flex;
+        justify-content: flex-end;
+        &__title {
+          min-height: 34px;
+          flex: 1;
+          display: flex;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          span {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: #333333;
+          }
+        }
+        &__handle {
+          // display: none;
+          display: flex;
+          justify-content: flex-end;
+          &__btn {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+  .he-drawer-menu-icon {
+    width: 18px;
+    height: 18px;
+    vertical-align: -4px;
+  }
+  .he-drawer-section__popular-item__name {
+    margin-left: 8px;
+  }
+}
+.he-drawer-section__popular {
+  .ant-tree li {
+    padding: 0;
+  }
+  .ant-tree li .ant-tree-node-content-wrapper,
+  .ant-tree li span.ant-tree-iconEle,
+  .ant-tree li span.ant-tree-switcher {
+    height: 36px;
+    line-height: 36px;
+  }
+  .ant-tree li .ant-tree-node-content-wrapper {
+    padding: 0;
+  }
+  .ant-tree.ant-tree-directory
+    .ant-tree-child-tree
+    > li
+    span.ant-tree-node-content-wrapper:before,
+  .ant-tree.ant-tree-directory > li span.ant-tree-node-content-wrapper:before {
+    height: 36px;
+  }
+  .ant-tree.ant-tree-directory
+    .ant-tree-child-tree
+    > li.ant-tree-treenode-selected
+    > span.ant-tree-node-content-wrapper:before,
+  .ant-tree.ant-tree-directory
+    > li.ant-tree-treenode-selected
+    > span.ant-tree-node-content-wrapper:before {
+    background-color: #e5edfe;
+  }
+  .ant-tree.ant-tree-directory
+    .ant-tree-child-tree
+    > li
+    span.ant-tree-node-content-wrapper:hover,
+  .ant-tree.ant-tree-directory > li span.ant-tree-node-content-wrapper:hover {
+    // .he-drawer-section__container__bar__handle{
+    //   display: flex;
+    // }
+  }
+  .ant-tree.ant-tree-directory
+    .ant-tree-child-tree
+    > li.ant-tree-treenode-selected
+    > span.ant-tree-switcher,
+  .ant-tree.ant-tree-directory
+    > li.ant-tree-treenode-selected
+    > span.ant-tree-switcher {
+    color: #333333;
+  }
+  .ant-tree.ant-tree-directory
+    .ant-tree-child-tree
+    > li
+    span.ant-tree-node-content-wrapper.ant-tree-node-selected,
+  .ant-tree.ant-tree-directory
+    > li
+    span.ant-tree-node-content-wrapper.ant-tree-node-selected {
+    color: #333333;
+  }
+  .ant-tree
+    li
+    span.ant-tree-switcher.ant-tree-switcher_close
+    .ant-select-switcher-icon,
+  .ant-tree
+    li
+    span.ant-tree-switcher.ant-tree-switcher_close
+    .ant-tree-switcher-icon
+    .ant-tree
+    li
+    span.ant-tree-switcher.ant-tree-switcher_open
+    .ant-select-switcher-icon,
+  .ant-tree
+    li
+    span.ant-tree-switcher.ant-tree-switcher_open
+    .ant-tree-switcher-icon,
+  .he-drawer-section .ant-tree li span.ant-tree-switcher {
+    color: #adb4be;
+  }
+  .anticon {
+    vertical-align: -0.1125em;
+  }
+}

@@ -1,0 +1,18 @@
+@import '~common/style/constants.less';
+
+@selector-border-color: @blue--xes;
+@selector-bg-color: fade(@blue--xes, 20%);
+
+.selector-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+  .selector-masker {
+    border: dotted 1px @selector-border-color;
+    position: absolute;
+    background-color: @selector-bg-color;
+  }
+}

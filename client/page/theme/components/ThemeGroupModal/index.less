@@ -1,0 +1,39 @@
+@import '~common/style/constants.less';
+
+.theme-info-modal {
+  user-select: none;
+
+  &__content {
+    font-size: 14px;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__row {
+      display: block;
+
+      &:not(:first-child) {
+        margin-top: 10px;
+      }
+
+      &__label {
+        color: #666666;
+        display: inline-block;
+        width: 98px;
+        text-align: left;
+      }
+
+      &__input,
+      &__text {
+        width: 180px;
+        text-align: left;
+        color: #333333;
+      }
+
+      &__text {
+        display: inline-block;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import '~common/style/constants.less';
+
+.he-breadcrumb {
+  color: #999;
+  font-size: 14px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  &__item {
+    &:not(:last-child) {
+      cursor: pointer;
+      color: @grey--support-text;
+    }
+
+    &&:last-child {
+      color: #999;
+    }
+  }
+  &__sign {
+    margin: 0 6px;
+  }
+}

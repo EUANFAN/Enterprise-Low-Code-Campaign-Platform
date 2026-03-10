@@ -1,0 +1,52 @@
+@import '~common/style/constants.less';
+
+.he-link {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  color: @grey--normal-text;
+  transition: opacity linear 0.1s;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:hover {
+    color: @blue--xes-darken;
+  }
+
+  &--secondary {
+    color: @grey--support-text;
+
+    &:hover {
+      color: @grey--support-text;
+    }
+  }
+
+  &--expand {
+    .he-link__arrow-container {
+      transform: rotate(90deg);
+    }
+  }
+
+  &--floating-arrow {
+    .he-link__arrow-container {
+      position: absolute;
+      left: 100%;
+    }
+  }
+
+  &__arrow-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 1px;
+    margin-left: 4px;
+    transition: transform ease-out 0.1s;
+
+    &__arrow {
+      height: 0.85em;
+      position: relative;
+    }
+  }
+}

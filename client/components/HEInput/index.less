@@ -1,0 +1,42 @@
+@import '~common/style/constants.less';
+
+.he-input {
+  display: inline-block;
+  position: relative;
+
+  &__input {
+    -webkit-appearance: none;
+    background-color: #fff;
+
+    border: 1px solid @grey--function-line;
+    border-radius: 4px;
+    padding: 6px 20px;
+
+    font-size: 14px;
+    line-height: 1.4;
+    color: @grey--normal-text;
+    transition: boder-color linear 0.1s, box-shadow linear 0.1s;
+    box-shadow: 0 0 0px @blue--xes-darken;
+
+    &::placeholder {
+      // color: @grey--support-text;
+      color: #bfbfbf;
+    }
+
+    &:focus {
+      outline: none;
+      outline-offset: none;
+      border-color: @blue--xes-darken;
+      box-shadow: 0 0 3px @blue--xes-darken;
+    }
+  }
+
+  &__letter-count {
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+    transform: translateX(100%);
+    font-size: 12px;
+    color: @grey--support-text;
+  }
+}

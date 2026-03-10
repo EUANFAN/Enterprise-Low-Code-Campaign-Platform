@@ -1,0 +1,64 @@
+@import '~common/style/constants.less';
+.index {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .index__list {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    .ant-col {
+      display: flex;
+      justify-content: center;
+      .index__list__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 305px;
+        height: 402px;
+        padding-top: 185px;
+        p {
+          font-size: 24px;
+          color: #fff;
+          text-align: center;
+          line-height: 42px;
+        }
+        span {
+          display: block;
+          font-size: 26px;
+          color: #0077ef;
+          width: 198px;
+          text-align: center;
+          height: 48px;
+          line-height: 48px;
+          background: #ffffff;
+          border-radius: 24px;
+          position: absolute;
+          bottom: 42px;
+        }
+      }
+      .index__list__item:nth-of-type(1) {
+        background: url(https://editor.xesimg.com/tailor/resource/home-1-1619690197275.png);
+        background-size: 100% 100%;
+      }
+      .index__list__item:nth-of-type(2) {
+        background: url(https://editor.xesimg.com/tailor/resource/home-2-1619690197275.png);
+        background-size: 100% 100%;
+      }
+      .index__list__item:nth-of-type(3) {
+        background: url(https://editor.xesimg.com/tailor/resource/home-3-1619690197276.png);
+        background-size: 100% 100%;
+      }
+    }
+  }
+  .he-drawer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: @grey--page-grey !important;
+    .he-drawer__footer {
+      background: transparent;
+    }
+  }
+}

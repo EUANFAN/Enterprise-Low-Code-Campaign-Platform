@@ -1,0 +1,45 @@
+@import '~common/style/constants.less';
+
+ul {
+  padding-left: 0;
+}
+.h5 {
+  display: flex;
+  flex-direction: column;
+  background-color: @grey--page-grey;
+
+  &__navbar {
+    z-index: 3;
+
+    &__user-icon {
+      margin-right: 41px;
+    }
+    &__title {
+      font-size: 16px;
+      color: #333333;
+      line-height: 60px;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    position: relative;
+  }
+}
+.he-icon-button {
+  //   flex-flow: wrap !important;
+  width: 100px;
+  justify-content: center;
+  border-radius: 0;
+  span {
+    margin-left: 5px;
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
+.department-select {
+  width: 128px;
+  margin-right: 25px;
+}

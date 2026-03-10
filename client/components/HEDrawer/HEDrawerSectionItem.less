@@ -1,0 +1,38 @@
+@import '~common/style/constants.less';
+
+.he-drawer-section-item {
+  height: 43px;
+  font-size: 14px;
+  color: @grey--normal-text;
+  margin-bottom: 11px;
+  display: flex;
+  flex: 1 100%;
+  align-items: center;
+  justify-content: center;
+
+  &__text {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &:not(&--loading):not(&--selected) {
+    cursor: pointer;
+
+    &:hover {
+      background-color: @grey--divider;
+      .operate-button {
+        display: flex;
+      }
+    }
+  }
+
+  &&--selected {
+    background-color: #e5edfe;
+    color: #333333;
+    cursor: default;
+    .operate-button {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import '~common/style/constants.less';
+
+.editor-floating-actions {
+  // position: absolute;
+  display: flex;
+  // flex-direction: column;
+
+  right: 340px + 16px;
+  bottom: 30px;
+
+  &__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .icon {
+      width: 20px;
+      height: 20px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__button-group {
+    margin-top: 10px;
+    .editor-floating-actions__button-group__button {
+      padding: 0;
+    }
+  }
+
+  &__button,
+  &__button-group__button {
+    white-space: pre;
+    width: 48px;
+    font-size: 12px;
+  }
+
+  &__button-group__button {
+    height: 49px;
+    line-height: 1.4;
+  }
+}

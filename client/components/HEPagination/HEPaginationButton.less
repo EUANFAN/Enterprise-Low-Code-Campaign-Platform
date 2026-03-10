@@ -1,0 +1,28 @@
+@import '~common/style/constants.less';
+
+.he-pagination-button {
+  cursor: pointer;
+  user-select: none;
+  line-height: 1;
+  margin: 0;
+  -webkit-appearance: none;
+  outline: none;
+
+  border: 1px solid @grey--function-line;
+
+  background-color: #fff;
+  color: @grey--support-text;
+  border-radius: 6px;
+
+  font-size: 14px;
+  width: 30px;
+  height: 30px;
+
+  &:hover {
+    color: @grey--normal-text;
+  }
+
+  &&--selected {
+    color: @blue--xes;
+  }
+}

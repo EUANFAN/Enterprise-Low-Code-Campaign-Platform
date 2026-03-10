@@ -1,0 +1,52 @@
+@import '~common/style/constants.less';
+
+.he-toast {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 50%;
+  top: 80px;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  z-index: 10001;
+  font-size: 14px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  .he-toast-title-wrap {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    .he-toast-title {
+      font-weight: 600;
+    }
+  }
+  .he-toast-desc {
+    color: #888;
+    font-size: 12px;
+    margin-top: 6px;
+    padding-left: 19px;
+  }
+  .icon {
+    width: 14px;
+    height: 14px;
+  }
+  .he-toast--active {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  span {
+    color: @grey--normal-text;
+    font-size: 14px;
+    margin-left: 5px;
+  }
+
+  &&--error {
+    color: #d0021b;
+  }
+}

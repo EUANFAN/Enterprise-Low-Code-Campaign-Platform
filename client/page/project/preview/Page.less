@@ -1,0 +1,15 @@
+.page {
+  position: relative;
+  width: 100%;
+  overflow: hidden; // 优化滚动条，使其流畅滚动
+  -webkit-overflow-scrolling: touch;
+
+  .flow-wrapper {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+[data-swipeable] {
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}

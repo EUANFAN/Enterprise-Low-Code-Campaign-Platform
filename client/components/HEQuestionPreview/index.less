@@ -1,0 +1,25 @@
+.question-preview-modal {
+  &__content {
+    padding: 16px;
+    display: flex;
+
+    *:not(:first-child) {
+      margin-left: 16px;
+    }
+
+    &__iframe {
+      border: none;
+      height: 603px;
+      width: 375px;
+      box-shadow: 0 0 0 1px grey;
+    }
+  }
+  .question-preview-modal__next {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    height: 80px;
+    font-size: 60px;
+  }
+}

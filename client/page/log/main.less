@@ -1,0 +1,97 @@
+.layout {
+  background-color: #f5f7fa;
+}
+
+.log {
+  &__action-nav {
+    background-color: #fff;
+    padding: 20px 0 20px 24px;
+    font-size: 16px;
+    border: 1px solid #e9eaed;
+    color: #212831;
+  }
+
+  &__goback {
+    cursor: pointer;
+    display: inline-block;
+    color: #5b6169;
+    margin-right: 16px;
+    .icon-goback {
+      margin-right: 8px;
+    }
+  }
+}
+
+.log-container {
+  min-width: 1398px;
+  min-height: calc(~'100vh - 200px');
+  padding: 30px;
+  background: #fff;
+  margin: 24px;
+  position: relative;
+
+  &__project-name {
+    margin-bottom: 20px;
+    line-height: 1;
+    font-size: 16px;
+    color: #212831;
+  }
+
+  &__table-container {
+    width: calc(~'100% - 40%');
+    min-height: 626px;
+    border-right: 1px solid #e2e6ed;
+    padding-right: 30px;
+    float: left;
+    .ant-table-tbody {
+      tr {
+        transition: none;
+        &.row-selected:hover:not(.ant-table-expanded-row) > td {
+          background-color: rgba(229, 237, 254, 0.6) !important;
+        }
+        &.row-selected td {
+          background-color: rgba(229, 237, 254, 0.6);
+        }
+      }
+    }
+    .ant-table-tbody tr > td:last-child {
+      padding-left: 0;
+    }
+
+    .action-buttons {
+      .he-hidden-button {
+        font-size: 14px;
+        text-align: left;
+      }
+    }
+    .icon-user {
+      width: 24px;
+      height: 24px;
+      margin-right: 5px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .previewBox {
+    float: right;
+    width: 40%;
+    height: 626px;
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+    &__container {
+      width: 375px;
+      height: 100%;
+      padding: 16px;
+      border-radius: 18px;
+      margin: 0 auto;
+      background-color: #f5f7fa;
+    }
+  }
+
+  .ant-pagination {
+    margin: 20px auto 0;
+    text-align: center;
+  }
+}

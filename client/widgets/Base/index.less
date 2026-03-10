@@ -1,0 +1,216 @@
+@import '~common/style/constants.less';
+
+// @border-color: #1DA57A;
+@border-color: @blue--xes-darken;
+@point-width: 7px;
+@point-height: 7px;
+@point-offset: 3px;
+.widget-wrapper {
+  position: absolute;
+  -webkit-user-select: none;
+  user-select: none;
+  &.highlight {
+    animation: 0.3s ease highlight;
+  }
+
+  .handler {
+    display: none;
+    position: absolute;
+  }
+  .content-container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .content {
+    overflow: hidden;
+    word-wrap: break-word;
+    height: 100%;
+  }
+  &::after {
+    content: '';
+    overflow: hidden;
+    word-wrap: break-word;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 888;
+  }
+  &-normal {
+    z-index: 900;
+  }
+  .handler-point {
+    height: @point-height !important;
+    width: @point-width !important;
+    border: solid 1px @border-color;
+    background-color: #fff;
+  }
+
+  .handler-vertical {
+    line-height: 0 !important;
+    height: 1px !important;
+    width: 100% !important;
+    background-color: @border-color;
+    left: 0;
+  }
+
+  .handler-horizontal {
+    width: 1px !important;
+    background-color: @border-color;
+    height: 100% !important;
+    top: 0 !important;
+  }
+
+  .handler-left {
+    left: -@point-offset !important;
+    top: 50% !important;
+    margin-top: -@point-offset;
+    cursor: w-resize !important;
+  }
+
+  .handler-right {
+    right: -@point-offset !important;
+    top: 50% !important;
+    margin-top: -@point-offset;
+    cursor: e-resize !important;
+  }
+
+  .handler-top {
+    top: -@point-offset !important;
+    left: 50% !important;
+    margin-left: -@point-offset;
+    cursor: n-resize !important;
+  }
+
+  .handler-bottom {
+    bottom: -@point-offset !important;
+    left: 50% !important;
+    margin-left: -@point-offset;
+    cursor: s-resize !important;
+  }
+
+  .handler-top-left,
+  .handler-bottom-left {
+    left: -(@point-offset) !important;
+  }
+  .handler-top-right,
+  .handler-bottom-right {
+    right: -@point-offset !important;
+  }
+  .handler-top-left,
+  .handler-top-right {
+    top: -@point-height / 2 !important;
+  }
+
+  .handler-bottom-left,
+  .handler-bottom-right {
+    bottom: -@point-height / 2 !important;
+  }
+
+  .react-resizable-handle {
+    position: absolute;
+    display: none;
+    cursor: ns-resize;
+    right: 0px;
+    bottom: 0px;
+    height: 16px;
+    width: 16px;
+
+    &::after {
+      content: ' ';
+      position: absolute;
+      display: block;
+      right: 3px;
+      bottom: 3px;
+      height: 10px;
+      width: 10px;
+      border-right: solid 1px @border-color;
+      border-bottom: solid 1px @border-color;
+    }
+  }
+}
+// 遮罩层：防止图片 或者其它内容被用户编辑
+.widget-wrapper-selected {
+  z-index: 1000;
+  &::after {
+    border: solid 1px @border-color;
+  }
+
+  .handler {
+    display: block;
+    z-index: 889;
+  }
+  .react-resizable-handle {
+    display: block;
+  }
+}
+
+.widget-wrapper:hover {
+  &::after {
+    border: solid 1px @border-color;
+  }
+}
+
+.widget-locked {
+  &::after {
+    cursor: default;
+  }
+
+  .handler {
+    display: none;
+  }
+}
+
+.widget-readonly {
+  &::after {
+    cursor: default;
+  }
+
+  .handler {
+    display: none;
+  }
+}
+
+.widget-loading {
+  height: 100%;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  background: #ddd;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  .widget-loading-text {
+    text-align: center;
+    line-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.dragging {
+  z-index: 9999;
+}
+
+@keyframes highlight {
+  from {
+    box-shadow: 0 0 8px orange;
+  }
+  50% {
+    box-shadow: 0 0 8px yellow;
+  }
+  to {
+    box-shadow: 0 0 8px green;
+  }
+}

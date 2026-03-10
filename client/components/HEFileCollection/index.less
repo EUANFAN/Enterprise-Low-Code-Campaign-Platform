@@ -1,0 +1,37 @@
+// Import colors
+@import '~common/style/constants.less';
+
+.he-file-collection {
+  position: relative;
+
+  &__list {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    background-image: url('../imgs/folder.png');
+    background-size: 100% 100%;
+    &__item {
+      display: flex;
+      justify-content: center;
+      width: 180px;
+      height: 180px;
+      overflow: hidden;
+      position: relative;
+      top: 28px;
+      left: 14px;
+      border-radius: 10px 10px 0px 0px;
+      &__overlay {
+        position: absolute;
+        bottom: 0px;
+        width: 208px;
+        height: 120px;
+        background: rgba(208, 219, 240, 0.8);
+      }
+      &&--empty {
+        border-style: dashed;
+        background: none;
+      }
+    }
+  }
+}

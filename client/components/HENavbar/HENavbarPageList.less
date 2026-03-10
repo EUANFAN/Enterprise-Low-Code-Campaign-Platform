@@ -1,0 +1,32 @@
+@import '~common/style/constants.less';
+
+.he-navbar-page-list {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 40px;
+  height: 100%;
+
+  &__item {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 128px;
+    font-size: 16px;
+    color: #333333;
+    transition: background-color linear 0.1s;
+
+    &--active,
+    &:hover {
+      color: #4a82f7;
+    }
+    &--active::after {
+      position: absolute;
+      top: 60px;
+      width: 48px;
+      height: 2px;
+      content: '';
+      background-color: #4a82f7;
+    }
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "permissionRule": {
+    "chooseBizUnit": {
+      "value": "1",
+      "name": "切换事业部",
+      "desc": "该字段为最高权限，请勿随意配置，包含显示切换事业部，搜索所有事业部的项目,外部组件等",
+      "key": "chooseBizUnit"
+    },
+    "themesCenter": {
+      "value": "1",
+      "name": "模板中心",
+      "des": "是否能够进入模版中心",
+      "children": {
+        "managerThemeAll": {
+          "name": "查看所有未审核的模板",
+          "desc": "仅控制筛选模版类型中的全部选项",
+          "key": "managerThemeAll",
+          "value": "1"
+        },
+        "themeAppro": {
+          "name": "模版审核",
+          "value": "1",
+          "key": "themeAppro"
+        },
+        "deleteTheme": {
+          "name": "删除模版",
+          "value": "1",
+          "key": "deleteTheme"
+        },
+        "addTheme": {
+          "name": "自定义模版",
+          "value": "1",
+          "key": "addTheme"
+        },
+        "modifyTheme": {
+          "name": "编辑模版",
+          "value": "1",
+          "key": "modifyTheme"
+        },
+        "copyTheme": {
+          "name": "复制模版",
+          "value": "1",
+          "key": "copyTheme"
+        },
+        "renameTheme": {
+          "name": "重命名模版",
+          "value": "1",
+          "key": "renameTheme"
+        },
+        "moreOptionTheme": {
+          "name": "模版更多操作入口",
+          "value": "1",
+          "key": "moreOptionTheme"
+        },
+        "deleteThemeGroups": {
+          "name": "删除模版组",
+          "value": "1",
+          "key": "deleteThemeGroups"
+        },
+        "updateThemeGroup": {
+          "name": "模版组管理",
+          "value": "1",
+          "key": "updateThemeGroup"
+        },
+        "renameThemeGroups": {
+          "name": "重命名模版组",
+          "value": "1",
+          "key": "renameThemeGroups"
+        }
+      },
+      "key": "themesCenter"
+    },
+    "projectCenter": {
+      "value": "1",
+      "name": "我的项目",
+      "des": "该配置影响用户是否能看到‘我的页面’入口",
+      "children": {
+        "managerAllProject": {
+          "false": "false",
+          "name": "是否能够管理本事业部所有的项目",
+          "key": "managerAllProject",
+          "value": "1"
+        },
+        "addProject": {
+          "value": "1",
+          "name": "新建项目/文件夹",
+          "key": "addProject"
+        },
+        "createRuleProject": {
+          "value": "1",
+          "name": "规则项目所有权限（包含创建/编辑等）",
+          "key": "createRuleProject"
+        },
+        "lookProject": {
+          "value": "1",
+          "name": "进入项目编辑",
+          "key": "lookProject"
+        },
+        "lookProjectLog": {
+          "value": "1",
+          "name": "查看项目历史记录",
+          "key": "lookProjectLog"
+        },
+        "lookProjectData": {
+          "value": "1",
+          "name": "查看项目数据",
+          "key": "lookProjectData"
+        },
+        "copyProject": {
+          "value": "1",
+          "name": "复制项目",
+          "key": "copyProject"
+        },
+        "deleteProject": {
+          "value": "1",
+          "name": "删除项目/文件夹",
+          "key": "deleteProject"
+        },
+        "moveProject": {
+          "value": "1",
+          "name": "移动项目/文件夹至文件夹",
+          "key": "moveProject"
+        },
+        "renameProject": {
+          "value": "1",
+          "name": "重命名项目/文件夹",
+          "key": "renameProject"
+        },
+        "transProjectToUser": {
+          "value": "1",
+          "name": "转移项目/文件夹至其他用户",
+          "key": "transProjectToUser"
+        },
+        "inviteUserManagerProject": {
+          "value": "1",
+          "name": "邀请其他用户协调管理项目/文件夹",
+          "key": "inviteUserManagerProject"
+        },
+        "lookBinProject": {
+          "value": "1",
+          "name": "查看回收站项目",
+          "key": "lookBinProject"
+        },
+        "restoreBinProject": {
+          "value": "1",
+          "name": "还原回收站项目",
+          "key": "restoreBinProject"
+        },
+        "saveProject": {
+          "value": "1",
+          "name": "保存项目",
+          "key": "saveProject"
+        },
+        "publishProject": {
+          "value": "1",
+          "name": "发布项目",
+          "key": "publishProject"
+        },
+        "saveProjectToTheme": {
+          "value": "1",
+          "name": "将项目保存为模版",
+          "key": "saveProjectToTheme"
+        }
+      },
+      "key": "projectCenter"
+    },
+    "users": {
+      "value": "1",
+      "name": "管理后台-用户管理",
+      "children": {
+        "modifyUserRole": {
+          "value": "1",
+          "name": "修改用户角色",
+          "key": "modifyUserRole"
+        }
+      },
+      "key": "users"
+    },
+    "userRoles": {
+      "value": "1",
+      "name": "管理后台-角色管理",
+      "children": {
+        "modifyUserRolePermission": {
+          "value": "1",
+          "name": "编辑角色权限",
+          "key": "modifyUserRolePermission"
+        }
+      },
+      "key": "userRoles"
+    },
+    "widgets": {
+      "value": "1",
+      "name": "管理后台-组件管理",
+      "children": {
+        "modifyWidgetTags": {
+          "value": "1",
+          "name": "修改组件标签",
+          "key": "modifyWidgetTags"
+        },
+        "restoreWidget": {
+          "value": "1",
+          "name": "还原组件",
+          "key": "restoreWidget"
+        },
+        "deleteWidget": {
+          "value": "1",
+          "name": "删除组件",
+          "key": "deleteWidget"
+        }
+      },
+      "key": "widgets"
+    },
+    "data": {
+      "value": "1",
+      "name": "管理后台-数据看板",
+      "key": "data"
+    },
+    "notice": {
+      "value": "1",
+      "name": "管理后台-公告管理",
+      "key": "notice"
+    }
+  },
+  "name": "超级管理员",
+  "des": "拥有全事业部所有权限"
+}

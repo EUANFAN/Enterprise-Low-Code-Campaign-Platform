@@ -1,0 +1,43 @@
+@import '~common/style/constants.less';
+
+.create-themeType-modal {
+  user-select: none;
+
+  &__content {
+    font-size: 14px;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__row {
+      display: flex;
+      padding: 0 60px;
+      align-items: center;
+      width: 100%;
+      min-height: 38px;
+
+      &:not(:first-child) {
+        margin-top: 10px;
+      }
+
+      &__label {
+        color: @grey--support-text;
+        display: inline-block;
+        width: 100px;
+      }
+
+      &__input {
+        width: 280px;
+      }
+      .he-radio-group__radio {
+        width: 140px;
+        margin-bottom: 10px;
+      }
+
+      .he-radio-group__radio:not(:first-child) {
+        margin-left: 0px;
+      }
+    }
+  }
+}

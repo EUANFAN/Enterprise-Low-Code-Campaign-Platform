@@ -1,0 +1,161 @@
+.progress-cover {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  background-color: #fff;
+}
+
+.progress-container {
+  width: 80%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  img {
+    width: 60%;
+    margin-bottom: 20px;
+  }
+}
+
+.main-container {
+  height: 100%;
+  .router-wrapper > .container {
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: auto;
+    // -webkit-overflow-scrolling解决ios页面卡顿问题
+    // -webkit-overflow-scrolling: touch;
+  }
+}
+
+.fade-enter,
+.fade-appear {
+  opacity: 0;
+}
+
+.fade-enter.fade-enter-active,
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+}
+.router-wrapper {
+  overflow: hidden;
+}
+
+/* 路由前进时的入场/离场动画 */
+.hforward-enter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.hforward-enter-active {
+  display: inline-block;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 500ms;
+}
+
+.hforward-exit {
+  display: inline-block;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hforward-exit-active {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 500ms;
+}
+
+/* 路由后退时的入场/离场动画 */
+.hback-enter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.hback-enter-active {
+  display: inline-block;
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 500ms;
+}
+
+.hback-exit {
+  display: inline-block;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hback-exit-active {
+  display: inline-block;
+  opacity: 0;
+  transform: translate(100%);
+  transition: all 500ms;
+}
+
+/* 路由前进时的入场/离场动画 */
+.vforward-enter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.vforward-enter-active {
+  display: inline-block;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 500ms;
+}
+
+.vforward-exit {
+  display: inline-block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.vforward-exit-active {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 500ms;
+}
+
+/* 路由后退时的入场/离场动画 */
+.vback-enter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.vback-enter-active {
+  display: inline-block;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 500ms;
+}
+
+.vback-exit {
+  display: inline-block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.vback-exit-active {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 500ms;
+}

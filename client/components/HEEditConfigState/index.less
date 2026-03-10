@@ -1,0 +1,33 @@
+.control-editConfig-modal {
+  z-index: 1000;
+  &__content {
+    min-width: 600px;
+    min-height: 300px;
+    // display: flex;
+    // flex-direction: row;
+    padding: 30px;
+    &__add {
+      text-align: left;
+      margin: 0 0 20px 0;
+    }
+    &__list {
+      &__actions {
+        height: auto;
+        border-top: none;
+        padding: 0 !important;
+        justify-content: flex-start !important;
+        .he-hidden-button {
+          font-size: 14px;
+          margin-right: 20px;
+        }
+        .he-hidden-button-group {
+          justify-content: flex-start;
+          flex: none;
+        }
+      }
+      &__text {
+        padding: 0 5px;
+      }
+    }
+  }
+}

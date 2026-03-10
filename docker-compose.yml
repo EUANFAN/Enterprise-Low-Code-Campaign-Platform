@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: public-env-mirror-service-registry.cn-beijing.cr.aliyuncs.com/dockerhub/mongo:3.4
+    container_name: mongodb-x-core
+    ports:
+      - '27027:27017'
+    volumes:
+      - ./volumes/mongo/backup:/backup
+      # 挂载数据目录
+      - ./volumes/mongo/data:/data/db
+      # 挂载日志目录
+      - ./volumes/mongo/log:/var/log/mongodb
+      # 挂载配置目录
+      - ./volumes/mongo/config:/etc/mongo
+    command: mongod
+  redis:
+    image: public-env-mirror-service-registry.cn-beijing.cr.aliyuncs.com/dockerhub/redis:4.0
+    container_name: redis-x-core
+    restart: always
+    command: ['redis-server', '--appendonly', 'yes']
+    ports:
+      - '6379:6379'
+    volumes:
+      # 持久化 目录映射
+      - './redis.conf:/usr/local/etc/redis/redis.conf'
+      - './volumes/redis/data:/data'

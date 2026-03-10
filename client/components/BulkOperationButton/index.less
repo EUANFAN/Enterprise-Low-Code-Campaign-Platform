@@ -1,0 +1,46 @@
+@import '~common/style/constants.less';
+
+.bulk-operation-button {
+  &&--active {
+    display: flex;
+
+    .bulk-operation-button__icon-buttons {
+      user-select: none;
+      line-height: 1;
+      margin: 0;
+      border-radius: 2em;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      background-color: #fff;
+      border: 1px solid rgba(173, 180, 190, 0.4);
+      border-left: none;
+      height: 30px;
+      padding: 0 28px;
+      display: flex;
+      align-items: center;
+
+      svg {
+        fill: #4d4d4d;
+      }
+      svg:hover {
+        fill: @blue--xes-darken;
+      }
+
+      & > * {
+        width: 16px;
+        height: 16px;
+
+        &:not(:first-child) {
+          margin-left: 20px;
+        }
+      }
+    }
+
+    .bulk-operation-button__cancel-button {
+      padding: 0 16px;
+      width: auto;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}

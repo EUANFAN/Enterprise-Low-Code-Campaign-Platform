@@ -1,0 +1,62 @@
+@import '~common/style/constants.less';
+
+.he-input {
+  display: inline-block;
+  position: relative;
+
+  &__input {
+    -webkit-appearance: none;
+    background-color: #fff;
+
+    border: 1px solid @grey--function-line;
+    border-radius: 6px;
+    padding: 8px 20px;
+
+    font-size: 14px;
+    line-height: 1.4;
+    color: @grey--normal-text;
+    transition: boder-color linear 0.1s, box-shadow linear 0.1s;
+    box-shadow: 0 0 0px @blue--xes;
+    position: relative;
+
+    &::placeholder {
+      color: @grey--support-text;
+    }
+
+    &:focus {
+      outline: none;
+      outline-offset: none;
+      border-color: @blue--xes;
+      box-shadow: 0 0 2px @blue--xes;
+    }
+  }
+
+  &__drop {
+    width: 100%;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    max-height: 150px;
+    border: 1px solid @blue--xes;
+    box-shadow: 0 0 3px @blue--xes;
+    padding: 8px 0;
+    border-radius: 6px;
+    overflow-y: auto;
+    font-size: 12px;
+    color: @grey--support-text;
+    background: #fff;
+
+    &__item {
+      height: 30px;
+      line-height: 30px;
+      text-indent: 15px;
+      cursor: pointer;
+      overflow-x: hidden;
+    }
+
+    &__item:hover {
+      background: #f9f9f9;
+      color: #333;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "name": "H5",
+      "script": "./dist/server/app.js",
+      "node_args": "--harmony",
+      "instances": 5,
+      "log_date_format": "YYYY-MM-DD HH:mm:ss.SSS Z",
+      "log_type": "json",
+      "merge_logs": true
+    }
+  ]
+}

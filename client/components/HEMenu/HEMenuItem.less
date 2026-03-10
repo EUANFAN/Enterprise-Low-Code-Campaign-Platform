@@ -1,0 +1,24 @@
+@import '~common/style/constants.less';
+
+.he-menu-item {
+  display: flex;
+  align-items: center;
+  height: 36px;
+  cursor: pointer;
+  span {
+    width: 100%;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0px 20px;
+    text-align: left;
+  }
+
+  &:hover {
+    background: #4a82f714;
+  }
+
+  &--selected {
+    color: #333333;
+  }
+}

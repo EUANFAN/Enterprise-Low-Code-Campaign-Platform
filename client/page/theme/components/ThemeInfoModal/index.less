@@ -1,0 +1,36 @@
+@import '~common/style/constants.less';
+
+.theme-info-modal {
+  user-select: none;
+
+  &__content {
+    font-size: 14px;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__row {
+      display: block;
+
+      &:not(:first-child) {
+        margin-top: 10px;
+      }
+
+      &__label {
+        color: @grey--support-text;
+        display: inline-block;
+        width: 98px;
+      }
+
+      &__input,
+      &__text {
+        width: 180px;
+      }
+
+      &__text {
+        display: inline-block;
+      }
+    }
+  }
+}

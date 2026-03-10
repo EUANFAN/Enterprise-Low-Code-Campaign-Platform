@@ -1,0 +1,33 @@
+.he-tag-panel {
+  padding: 0px 12px;
+  &__title {
+    display: inline-block;
+    font-size: 13px;
+    &-group {
+      & + & {
+        margin-top: 3px;
+      }
+      padding-left: 48px;
+    }
+  }
+  .tab-group {
+    display: block;
+    margin-bottom: 10px;
+  }
+  &__tag {
+    padding: 3px 8px;
+    margin: 4px 3px;
+    cursor: pointer;
+    &.ant-tag {
+      cursor: pointer;
+    }
+    &:first-child {
+      margin-left: -48px;
+    }
+  }
+  .ant-tag-checkable:active,
+  .ant-tag-checkable-checked {
+    background-color: #e8f0fe;
+    color: #4a82f7;
+  }
+}

@@ -1,0 +1,29 @@
+@import '~common/style/constants.less';
+
+.he-number-input {
+  display: inline-block;
+  position: relative;
+  -webkit-appearance: none;
+  background-color: #fff;
+
+  border: 1px solid @grey--function-line;
+  border-radius: 6px;
+  padding: 8px 20px;
+
+  font-size: 14px;
+  line-height: 1.4;
+  color: @grey--normal-text;
+  transition: boder-color linear 0.1s, box-shadow linear 0.1s;
+  box-shadow: 0 0 0px @blue--xes;
+
+  &::placeholder {
+    color: @grey--support-text;
+  }
+
+  &:focus {
+    outline: none;
+    outline-offset: none;
+    border-color: @blue--xes;
+    box-shadow: 0 0 3px @blue--xes;
+  }
+}

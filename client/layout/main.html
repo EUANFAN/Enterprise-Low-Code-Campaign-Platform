@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-cn" data-dpr="1" style="font-size: 37.5px; width: 100%">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ title }}</title>
+    <link rel="shortcut icon" href="{{ ico }}" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    {{#if keywords}}
+    <meta name="{{ keywords }}" content="{{ description }}" />
+    {{/if}} {{#equal inDev false}}
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    {{/equal}}
+
+    <link rel="dns-prefetch" href="//static-inc.xiwang.com" />
+    <link rel="dns-prefetch" href="//res.xiwang.com" />
+    <link rel="dns-prefetch" href="//m.xiwang.com" />
+    <% for (var css in htmlWebpackPlugin.files.css) { %>
+    <link href="<%=htmlWebpackPlugin.files.css[css] %>" rel="stylesheet" />
+    <% } %> {{#if mainStyles}}
+    <link href="//res.xiwang.com/common/css/env.css" rel="stylesheet" />
+    {{#each mainStyles}}
+    <link href="http:{{{this}}}" rel="stylesheet" />
+    {{/each}} {{/if}}
+
+    <!-- loading、线上测试弹窗 相关样式 -->
+    <style>
+      @keyframes rotate {
+        to {
+          transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          -moz-transform: rotate(360deg);
+          -webkit-transform: rotate(360deg);
+          -o-transform: rotate(360deg);
+        }
+      }
+
+      #hidden-loading {
+        display: none;
+      }
+
+      #loading-mask {
+        height: 100vh;
+        left: 0;
+        top: 0;
+        position: fixed;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        z-index: 2147483647;
+      }
+
+      #loading-box {
+        margin: 10px auto 0 auto;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        border: 1px solid rgba(255, 238, 237, 1);
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      #loading-box::after {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        content: '';
+        border-radius: inherit;
+        border: 1px solid rgba(255, 238, 237, 1);
+        border-top-color: red;
+        animation: rotate 0.5s linear infinite;
+      }
+
+      .loading-img {
+        width: 35px;
+        height: auto;
+      }
+    </style>
+    <script>
+      if (!window.Proxy) {
+        window.location.href = 'https://h5.xueersi.com/noproxy.html';
+      }
+    </script>
+    <script>
+      !(function () {
+        var dpr, rem, scale;
+        var docEl = document.documentElement;
+        var metaEl = document.querySelector('meta[name="viewport"]');
+        dpr = 1;
+        scale = 1;
+        function setRootSize() {
+          // 如果在h5.xesv5.com域下编辑平台根元素为37.5px，发布之后根元素根据设备发生变化
+          if (
+            ~[
+              'editor-dev.xiwang.com',
+              'editor.xiwang.com',
+              'editor-test.xiwang.com',
+              'editor-gray.xiwang.com'
+            ].indexOf(window.location.hostname) &&
+            window.location.pathname != '/project/preview'
+          ) {
+            docEl.style.fontSize = '37.5px';
+            window.rem = 37.5;
+          } else {
+            var rootWidth = docEl.offsetWidth;
+            // 最大540像素
+            rootWidth = Math.min(rootWidth / dpr, 750);
+            // 动态写入样式
+            rem = (rootWidth * dpr) / 10;
+            window.rem = rem;
+            docEl.style.fontSize = rem + 'px';
+            remPatch();
+          }
+        }
+        function remPatch() {
+          var remTestFragment = document.createElement('div');
+          remTestFragment.id = 'rem-test';
+          remTestFragment.style.width = '100rem';
+          remTestFragment.style.opacity = 0;
+          remTestFragment.style.position = 'absolute';
+          remTestFragment.style.top = '-1000px';
+          remTestFragment.style.left = '-1000px';
+          document.addEventListener('DOMContentLoaded', function () {
+            document.body.appendChild(remTestFragment);
+            var currentTestWidth = remTestFragment.offsetWidth;
+            var rootFontSize = docEl.style.fontSize.replace(/px/, '') * 100;
+            var scale = currentTestWidth / rootFontSize;
+            rootFontSize = rootFontSize / 100 / scale;
+            window.rootFontSize = rootFontSize;
+            docEl.style.fontSize = rootFontSize + 'px';
+            remTestFragment.parentNode.removeChild(remTestFragment);
+          });
+        }
+        var delay;
+        function onResize() {
+          // 为什么横屏变为竖屏执行两次，竖屏变为横屏执行一次
+          clearTimeout(delay);
+          delay = setTimeout(setRootSize, 300);
+        }
+
+        window.addEventListener('resize', onResize, false);
+        // 设置viewport，进行缩放，达到高清效果
+        metaEl.setAttribute(
+          'content',
+          'initial-scale=' +
+            scale +
+            ',maximum-scale=' +
+            scale +
+            ', minimum-scale=' +
+            scale +
+            ',user-scalable=no, viewport-fit=cover'
+        );
+
+        setRootSize();
+        // 设置data-dpr属性，留作的css hack之用
+        docEl.setAttribute('data-dpr', dpr);
+        // 给js调用的，某一dpr下rem和px之间的转换函数
+        window.rem2px = function (v) {
+          v = parseFloat(v);
+          return v * rem;
+        };
+        window.px2rem = function (v) {
+          v = parseFloat(v);
+          return v / rem;
+        };
+
+        window.dpr = dpr;
+      })();
+    </script>
+  </head>
+
+  <body
+    class="{{#if inPreview}}production-state loading-state{{else}}edit-state{{/if}}"
+  >
+    <div id="{{#if inPreview}}loading-mask{{else}}hidden-loading{{/if}}">
+      <div id="loading-box">
+        <img
+          class="loading-img"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAAAwCAMAAACffixXAAAAilBMVEUAAADtACnsACnsACnsACntACnsACrsACrtACnqACrsACnsACrtACrsACrsACnsACnsACnsACnsACrsACrsACnsACrrACr////+8/XtDjX1eY/xTmvtHEL809r7ytLzW3bvMlT94uf3jqD0aYHuJkr6ucX6wcv4rbr96e34pLLzcYjwQ2L3mKr1hJjrzhEWAAAAFnRSTlMAFvTS7CZB5DgO3Jdosqd9Ub1zxVyL81S6/AAAAiBJREFUSMedlumWqkAMhLtZZVFRryWLIAO4j+//epcZXEKzdDPfHw99oEwqCYEN41jrhW5o0Gx94c/YX7AWGiiGN1nHt9FFD9gEAhf9bJSjcTwMs2RKmC7G2HAmZ2ZgHNeUF0WDDFumYmqQ445nxF2osGFjzKHGlg3zD6rMhpMxoIo+5KlnQB17yeVtKkdbdtqDDtw+PqbZ+RYB7cMsPZf0UDcHHY2KXUMYSw5hUH99qpHt3pwqNOTp5/BMU7I+uYBw2lHOh7zKy2Pr7EpjMfsqG+/kHHpqvaDJhAoiXyCsm9mHEIichNrCxUCQKYlcxXcdByGSC3TysYXyIic3Fsd2nb6JXREIMyGb+0cjAgqiUQLVR2UvWGuDkNAy0lKlqHm8LysQ5oyhP5Kq3Xjf5C/ESHRBJG/f9utK+Ba593tiCCL4anXlpZbIUdaXGWmi5oogihzeJkTNQ2GE5Cm6v7wm+Y7RSJCEL5X42jzxdKKIX1FecmGDMGagzU2p6SkrsiVUm/bS3fHdNZFJB0fAZKTbFAf50MmmJhAO9+H48EXdQGo80dpJtvqM9aoUIxol2qw/G0PwJUkHJE5Ci+gW3X/+Svs5265fnZv2STxT0XzP/fmZB911zlmN9Wq+Ks6ow+HxtqffW47J2TCcdF+VlPGjeMRlQmbfc5gCgY4u079kgxX6mVtsAuayG87K52wqTrCd61pTDn2xtBz2dziXP/0fkEvK79DGfG4AAAAASUVORK5CYII="
+        />
+      </div>
+    </div>
+
+    <!-- 页面根节点 -->
+    <div id="main">{{{mainHTML}}}</div>
+    <!-- PageData -->
+
+    <script>
+      (function () { if (!/debug=true/.test(window.location.href)) { return } var script = document.createElement("script"); script.src = "//cdn.bootcss.com/eruda/2.2.0/eruda.js"; script.async = false; document.getElementsByTagName("head")[0].appendChild(script); script.onload = function () { eruda.init() } })();
+
+      (function () {
+        window.addEventListener('error', function (e) {
+          var elem = e.target;
+          if (elem.tagName && /img|script|link/.test(elem.tagName.toLowerCase())) {
+            window.__sourceError = window.sourceError || [];
+            window.__sourceError.push(e);
+          }
+        }, true);
+      })();
+
+      var PageData = {{{ PageData }}};
+    </script>
+    <script
+      nomodule
+      src="//res.xiwang.com/common/js/es6-shim.js"
+      crossorigin
+    ></script>
+    <script
+      src="//res.xiwang.com/common/js/react-reactDom.min.js"
+      crossorigin
+    ></script>
+    {{!-- <script crossorigin src="https://unpkg.com/react@16.14.0/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16.14.0/umd/react-dom.development.js"></script> --}}
+    {{#each scripts}}
+    <script type="text/javascript" src="{{this}}"></script>
+    {{/each}} <% for (var index in htmlWebpackPlugin.files.js) { %>
+    <script
+      type="text/javascript"
+      src="<%=htmlWebpackPlugin.files.js[index] %>"
+    ></script>
+    <% } %>
+  </body>
+</html>

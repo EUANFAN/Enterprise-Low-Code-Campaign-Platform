@@ -1,0 +1,46 @@
+.widget-card-box {
+  display: inline-block;
+  width: 210px;
+  height: 180px;
+  padding: 14px;
+  box-sizing: border-box;
+  margin: 40px 70px 0 0;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  transition: box-shadow 0.3s ease-out;
+  text-align: center;
+  &:nth-child(1) {
+    margin-top: 0;
+  }
+  &:nth-child(2) {
+    margin-top: 0;
+  }
+  &:nth-child(3) {
+    margin-top: 0;
+  }
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+  &-selected {
+    box-shadow: 0 0 0 2px #4a82f7;
+  }
+  .widget-card-frame {
+    background: #666;
+    height: 134px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      vertical-align: bottom;
+      position: relative;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+    }
+  }
+  .widget-card-name {
+    height: 30px;
+    line-height: 30px;
+    overflow-wrap: break-word;
+  }
+}

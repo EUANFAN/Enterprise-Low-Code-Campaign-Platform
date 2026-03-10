@@ -1,0 +1,53 @@
+@import '~common/style/constants.less';
+
+.he-radio-group {
+  display: flex;
+  flex-flow: row wrap;
+
+  &__radio {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+
+    &__checkbox {
+      border-radius: 50%;
+      background: #fff;
+      position: relative;
+      width: 20px;
+      height: 20px;
+      border: 1px solid @grey--function-line;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::after {
+        content: ' ';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        background: @blue--xes-darken;
+        width: 10px;
+        height: 10px;
+        opacity: 0;
+        transition: opacity 0.1s;
+      }
+
+      .he-radio-group__radio--selected & {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+
+    &__label {
+      margin-left: 6px;
+    }
+  }
+}

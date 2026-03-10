@@ -1,0 +1,109 @@
+@import '~common/style/constants.less';
+.he-select__overlay::-webkit-scrollbar {
+  width: 0 !important;
+}
+.he-select {
+  position: relative;
+  background-color: #fff;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  border-radius: 2px !important;
+  border: 1px solid rgba(173, 180, 190, 0.4);
+  box-sizing: border-box;
+  &:hover {
+    border: 1px solid @blue--xes-darken !important;
+    .he-select__arrow {
+      fill: @blue--xes-darken;
+    }
+
+    .he-select__trigger {
+      color: @blue--xes-darken;
+    }
+  }
+  .he-select-search {
+    border-radius: 0;
+    width: 278px;
+  }
+  &__trigger {
+    padding: 7px 20px;
+    color: #333;
+    box-sizing: border-box;
+    &--empty {
+      color: #bfbfbf;
+    }
+  }
+
+  &,
+  &__overlay {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1;
+    color: @grey--normal-text;
+    box-shadow: 0 0 0px @blue--xes;
+  }
+
+  &__overlay {
+    overflow: scroll;
+    position: absolute;
+    z-index: 10;
+    border-color: @blue--xes;
+    border-radius: 2px;
+    box-shadow: 0px 1px 4px 0px rgba(137, 158, 204, 0.8);
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    font-size: 14px;
+    user-select: none;
+
+    &__header {
+      padding: 8px 20px;
+      color: @grey--support-text;
+    }
+    &__loading {
+      color: #999;
+      padding: 0 20px;
+      height: 36px;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__items {
+      color: @grey--normal-text;
+      margin-bottom: 0;
+      &__item {
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        height: 36px;
+        font-size: 14px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #4a82f714;
+        }
+
+        &--selected {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &__arrow {
+    z-index: 1;
+    top: 10px;
+    right: 13px;
+    position: absolute;
+    height: 11px;
+    transition: transform ease-out 0.1s;
+
+    .he-select.he-select--active & {
+      z-index: 11;
+      transform: rotateZ(90deg);
+    }
+  }
+}

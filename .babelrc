@@ -1,0 +1,66 @@
+{
+  "presets": [
+    "@babel/preset-react",
+    [
+      "@babel/preset-env",
+      {
+        "loose": false,
+        "useBuiltIns": "usage",
+        "corejs": 3,
+        "targets": { "ie": "11" },
+        "forceAllTransforms": true,
+        "shippedProposals": true
+      }
+    ]
+  ],
+  "plugins": [
+    "lodash",
+    "transform-node-env-inline",
+    "@babel/plugin-transform-runtime",
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    ["@babel/plugin-proposal-class-properties", { "loose": false }],
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-transform-modules-commonjs",
+    "@babel/plugin-syntax-dynamic-import",
+    [
+      "import",
+      { "libraryName": "antd", "libraryDirectory": "lib", "style": true },
+      "ant"
+    ],
+    [
+      "import",
+      {
+        "libraryName": "antd-mobile",
+        "libraryDirectory": "lib",
+        "style": true
+      },
+      "antd-mobile"
+    ],
+    [
+      "module-resolver",
+      {
+        "cwd": "babelrc",
+        "root": ["./"],
+        "alias": {
+          "apis": "./client/apis",
+          "common": "./client/common",
+          "config": "./client/config",
+          "context": "./client/context",
+          "components": "./client/components",
+          "store": "./client/store",
+          "state": "./client/state",
+          "static": "./client/static",
+          "widgets": "./client/widgets",
+          "triggers": "./client/triggers",
+          "controls": "./client/controls",
+          "base": "./client/base",
+          "utils": "./client/utils",
+          "@": "./client/",
+          "globals": "./client/global",
+          "defaultData": "./client/defaultData",
+          "hook": "./client/hook"
+        }
+      }
+    ]
+  ]
+}

@@ -1,0 +1,117 @@
+@import '~common/style/constants.less';
+
+.project-collaborate-modal {
+  user-select: none;
+  width: 758px;
+  height: 80%;
+  min-height: 400px;
+
+  &__partner-num {
+    width: 100%;
+    margin-top: 30px;
+    text-align: left;
+    background: #fff;
+    height: 40px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.85);
+  }
+
+  &__content {
+    font-size: 14px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 60px;
+      align-items: center;
+      padding: 0 60px;
+
+      &__label {
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      input {
+        width: 320px;
+      }
+    }
+
+    &__body {
+      flex: 1;
+      padding: 0 20px;
+      overflow: auto;
+      width: 100%;
+    }
+
+    &-list {
+      width: 100%;
+      color: #333;
+      line-height: 14px;
+
+      &__item {
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
+        align-items: center;
+        border-top: 1px solid #f0f2f6;
+
+        &__id {
+          flex-basis: 80px;
+        }
+
+        &__department {
+          flex: 1;
+        }
+
+        &__btn {
+          color: #4a82f7;
+          width: 100px;
+          cursor: pointer;
+          text-align: center;
+        }
+      }
+    }
+    &__btn {
+      width: 100px !important;
+    }
+    &__cancel-btn {
+      margin-right: 20px;
+    }
+  }
+
+  &__partner-list {
+    padding: 0 40px;
+  }
+
+  &__partner-hr {
+    border-bottom: 1px solid rgba(173, 180, 190, 0.24);
+    box-shadow: 0px 2px 6px 0px rgba(173, 180, 190, 0.24);
+  }
+
+  .he-modal-actions {
+    padding: 13px 20px;
+    border-top: 1px solid #dcdcdc;
+  }
+
+  &__popover {
+    &__title {
+      color: rgba(0, 0, 0, 0.85);
+      font-weight: 500;
+      padding: 20px 0 40px;
+    }
+    &__button {
+      display: flex;
+      justify-content: flex-end;
+
+      &__cancel {
+        margin-right: 10px;
+      }
+    }
+  }
+}

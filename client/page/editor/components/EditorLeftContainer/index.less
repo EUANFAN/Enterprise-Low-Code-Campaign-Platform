@@ -1,0 +1,80 @@
+.editorLeftContainer_container {
+  height: 100%;
+  display: flex;
+  position: relative;
+  .tab {
+    width: 64px;
+    padding-top: 6px;
+    background-color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    .tab-card {
+      position: relative;
+      text-align: center;
+      padding: 12px 0;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 17px;
+      color: #9da3ac;
+      background: #fff;
+      border: none;
+      outline: none;
+      width: 100%;
+      cursor: pointer;
+      border-radius: 0;
+      word-break: break-all;
+      user-select: none;
+      i {
+        display: block;
+        margin: 0 auto 4px;
+        font-size: 24px;
+        color: #070707;
+      }
+    }
+    .tab-card:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 14px;
+      height: 40px;
+      width: 3px;
+      background-color: #2354f4;
+      display: none;
+    }
+
+    .actived > i,
+    .actived,
+    .tab-card:hover,
+    .tab-card:hover > i {
+      color: #2354f4;
+    }
+    .actived::before,
+    .tab-card:hover::before {
+      display: block;
+    }
+  }
+  .context {
+    width: 300px;
+    overflow: hidden;
+    transition: width 0.3s;
+    // border: 1px solid #ccc;
+  }
+  .context_active {
+    width: 0;
+    border-left:1px solid #ccc;
+  }
+  .collapsed{
+    width: 20px;
+    height: 64px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    background-image: url('static/imgs/popupClose.png');
+    position: absolute;
+    right: -36px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

@@ -1,0 +1,22 @@
+.editor {
+  &_tree_node {
+    position: relative;
+    i {
+      margin-right: 5px;
+    }
+    > i:first-child {
+      margin-right: 126px;
+    }
+    .disable {
+      color: #ccc;
+    }
+    .tree_move {
+      font-size: 12px;
+      opacity: 0;
+      margin-right: 10px;
+    }
+  }
+  &_tree_node:hover > .tree_move {
+    opacity: 255;
+  }
+}

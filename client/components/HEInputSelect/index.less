@@ -1,0 +1,50 @@
+@import '~common/style/constants.less';
+.he-select__overlay::-webkit-scrollbar {
+  width: 0 !important;
+}
+.he-input-select {
+  position: relative;
+  background-color: #fff;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  .he-select-search {
+    border-radius: 0;
+    width: 100%;
+  }
+  &:hover {
+    border: 1px solid @blue--xes-darken !important;
+    border-radius: 5px;
+  }
+  &,
+  &__overlay {
+    display: flex;
+    flex-direction: column;
+    width: 204px;
+    font-size: 14px;
+    line-height: 1;
+    color: @grey--normal-text;
+    box-shadow: 0 0 0px @blue--xes;
+  }
+
+  &__overlay {
+    overflow: scroll;
+    position: absolute;
+    z-index: 10;
+    border-color: @blue--xes;
+    border-radius: 2px;
+    box-shadow: 0px 1px 4px 0px rgba(137, 158, 204, 0.8);
+    top: 32px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    font-size: 14px;
+    user-select: none;
+  }
+}
+.he-select-container {
+  display: flex;
+  background: rgb(255, 255, 255);
+  align-items: center;
+}

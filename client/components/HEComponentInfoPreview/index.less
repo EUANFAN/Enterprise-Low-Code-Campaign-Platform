@@ -1,0 +1,20 @@
+@import '~common/style/constants.less';
+.componentInfo-preview-skylayer {
+  z-index: 1000;
+}
+.componentInfo-preview-modal {
+  user-select: none;
+  &__content {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    &__iframe {
+      height: 508px;
+      width: 300px;
+      // box-shadow: 0 0 0 1px grey;
+      background: #f5f7fa;
+      border: 1px solid #f5f7fa;
+    }
+  }
+}

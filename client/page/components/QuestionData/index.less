@@ -1,0 +1,132 @@
+@import '~common/style/constants.less';
+
+.question-data {
+  width: 100%;
+  background: #fff;
+  margin-bottom: 50px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.06);
+  .question-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 20px;
+    height: 60px;
+    box-sizing: border-box;
+  }
+  .question-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #212831;
+  }
+  .ant-table-wrapper {
+    padding: 0 20px;
+    .ant-table-thead > tr > th {
+      background: #f5f5f5;
+    }
+  }
+  .question-operate {
+    display: flex;
+  }
+  .operate-download {
+    cursor: pointer;
+    width: 72px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background: #faeeee;
+    color: #4a82f7;
+    border: 1px solid #4a82f7;
+    border-radius: 6px;
+    margin-right: 16px;
+  }
+  .operate-dropdown {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    .dropdown-button {
+      cursor: pointer;
+      width: 72px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      background: #faeeee;
+      color: #4a82f7;
+      border: 1px solid #4a82f7;
+      border-radius: 6px;
+    }
+    .dropdown-list {
+      position: absolute;
+      top: 160%;
+      right: 0;
+      background: #fff;
+      box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.06);
+      padding: 20px 16px;
+      overflow: hidden;
+      z-index: 2;
+      width: 500px;
+      color: #3b3b3b;
+      .packup {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 16px;
+      }
+      .packup-button {
+        display: inline-block;
+        color: #4a82f7;
+        padding-right: 20px;
+        position: relative;
+        cursor: pointer;
+        &::after {
+          content: '';
+          width: 0px;
+          height: 0px;
+          border: 5px solid #4a82f7;
+          border-bottom: 12px solid #4a82f7;
+          border-top-color: transparent;
+          border-left-color: transparent;
+          border-right-color: transparent;
+          position: absolute;
+          right: 0;
+        }
+      }
+    }
+    .history-download {
+      color: #4a82f7;
+      cursor: pointer;
+    }
+    .list-header li,
+    .list-item li {
+      width: 25%;
+      line-height: 40px;
+      margin: 2px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .list-header,
+    .list-item {
+      display: flex;
+      list-style: none;
+      margin-bottom: 0;
+      &:first-of-type li {
+        background: #faeeee;
+      }
+    }
+    .list-item {
+      height: 54px;
+      line-height: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .header-time {
+        line-height: 20px;
+        white-space: normal;
+      }
+    }
+  }
+  .ant-table-pagination.ant-pagination {
+    float: none;
+    display: flex;
+    margin: 16px 0;
+    justify-content: center;
+  }
+}

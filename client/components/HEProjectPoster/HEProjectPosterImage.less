@@ -1,0 +1,18 @@
+@import '~common/style/constants.less';
+
+.he-project-poster-image {
+  transform-origin: 0 0;
+  position: relative;
+  &--hover {
+    border: 2px solid @blue--xes;
+  }
+
+  .he-project-poster-image-masker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 375px;
+    height: 603px;
+  }
+}

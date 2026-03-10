@@ -1,0 +1,57 @@
+@import '~common/style/constants.less';
+
+.he-search-input {
+  display: inline-block;
+  position: relative;
+  width: 280px;
+  height: 32px;
+
+  &__input {
+    width: 100%;
+    height: 100%;
+
+    background-color: #fff;
+    border: 1px solid @grey--function-line;
+    border-radius: 3px;
+
+    padding: 0 0 0 20px;
+
+    font-size: 14px;
+    color: @grey--normal-text;
+
+    -webkit-appearance: none;
+
+    line-height: 1.4;
+    transition: boder-color linear 0.1s, box-shadow linear 0.1s;
+    box-shadow: 0 0 0 @blue--xes;
+
+    &::placeholder {
+      color: @grey--support-text;
+    }
+
+    &:focus {
+      outline: none;
+      outline-offset: none;
+      border-color: @grey--function-line;
+      box-shadow: 0 0 3px @blue--xes;
+    }
+
+    &::after {
+      content: ' ';
+      display: block;
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: blue;
+    }
+  }
+
+  &__action-button {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

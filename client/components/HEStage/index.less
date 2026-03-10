@@ -1,0 +1,101 @@
+@import '~common/style/constants.less';
+
+@indicator-color: @blue--xes;
+
+.layout {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.stage-container {
+  height: 100%;
+  position: relative;
+  box-shadow: 0 0 16px #dfdfdf;
+}
+
+.react-grid-placeholder {
+  transition-duration: 100ms;
+  opacity: 0.2;
+  background-color: #ff0000;
+}
+
+.boundary {
+  left: 0;
+  top: 0;
+
+  .vertical-line {
+    //border-top: solid 1px #ccc;
+    position: absolute;
+    width: 0;
+  }
+  .horizontal-line {
+    //border-left: solid 1px #ccc;
+    position: absolute;
+    height: 0;
+  }
+
+  .top {
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .left {
+    left: 0;
+    top: 0;
+    height: 100%;
+  }
+
+  .bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .right {
+    right: 0;
+    top: 0;
+    height: 100%;
+  }
+}
+
+.indicator-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10000;
+  pointer-events: none;
+
+  .indicator-horizontal,
+  .indicator-vertical {
+    position: absolute;
+
+    .point {
+      height: 7px;
+      width: 7px;
+      border: solid 1px @indicator-color;
+      background-color: #fff;
+      position: absolute;
+    }
+    .text {
+      position: absolute;
+      color: #333;
+      font-size: 12px;
+      background-color: #fff;
+      padding: 0 7px;
+      border: dotted 1px #aaa;
+    }
+  }
+
+  .indicator-vertical {
+    border-left: solid 1px transparent;
+    border-right: solid 1px @indicator-color;
+  }
+  .indicator-horizontal {
+    border-top: solid 1px transparent;
+    border-bottom: solid 1px @indicator-color;
+  }
+}

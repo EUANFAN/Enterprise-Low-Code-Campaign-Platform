@@ -1,0 +1,40 @@
+@import '~common/style/constants.less';
+
+.project-card {
+  &__actions {
+    width: 100%;
+    color: @grey--support-text;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    background: #fff;
+    height: 62px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-items: center;
+    // border-top: none;
+
+    &__button-group {
+      flex: 1;
+    }
+
+    &__main-action {
+      margin-left: 10px;
+    }
+  }
+}
+.project-table {
+  &__actions {
+    height: auto;
+    border-top: none;
+    padding: 0;
+    .he-hidden-button {
+      font-size: 14px;
+      margin-right: 20px;
+    }
+    .he-hidden-button-group {
+      justify-content: flex-start;
+      flex: none;
+    }
+  }
+}
