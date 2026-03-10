@@ -30,7 +30,7 @@ let plugins = [
     remotes: {
       h5_federation: `promise new Promise(resolve => {
       const version = new Date().getTime()
-      const remoteUrlWithVersion = '//res.xiwang.com/federation/federation.js?ver=' + version
+      const remoteUrlWithVersion = '//res.example.com/federation/federation.js?ver=' + version
       const script = document.createElement('script')
       script.src = remoteUrlWithVersion
       script.onload = () => {

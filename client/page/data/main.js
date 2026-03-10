@@ -54,7 +54,7 @@ const { project } = god.PageData;
 const projectId = project && project._id;
 export default class App extends React.Component {
   state = {
-    title: '希望学',
+    title: '示例公司',
     adminData: [
       { name: '项目总数', count: '--' },
       { name: '已发布项目总数', count: '--' },

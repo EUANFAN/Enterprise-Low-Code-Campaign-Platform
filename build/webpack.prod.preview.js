@@ -13,15 +13,15 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin')
 // }));
 
 const publicPathConfig = {
-  test: '//m-test.xiwang.com/h5/',
-  gray: '//m-gray.xiwang.com/h5/',
-  prod: '//m.xiwang.com/h5/'
+  test: '//m-test.example.com/h5/',
+  gray: '//m-gray.example.com/h5/',
+  prod: '//m.example.com/h5/'
 }
 
 const reqUrlConfig = {
-  test: "'https://wtest.xiwang.com'",
-  // gray: "'https://wtest.xiwang.com'",
-  prod: "'https://w.xiwang.com'"
+  test: "'https://wtest.example.com'",
+  // gray: "'https://wtest.example.com'",
+  prod: "'https://w.example.com'"
 }
 
 let publicPath = publicPathConfig[process.env.NODE_ENV]

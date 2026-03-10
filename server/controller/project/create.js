@@ -107,7 +107,7 @@ module.exports.post = async function (ctx) {
       // 创建项目
       pages = [{ widgets: [], triggers: [...triggers] }];
       projectData = createProjectFromPage({
-        title: '希望学',
+        title: '示例公司',
         layout: layout || 'normal',
         useData: false,
         pages: pages,

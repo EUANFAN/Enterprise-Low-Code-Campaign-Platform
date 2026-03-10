@@ -7,7 +7,7 @@ const UserSelects = {
   NONE: 'none',
 };
 
-const DEFAULT_TITLE = '希望学';
+const DEFAULT_TITLE = '示例公司';
 const DEFAULT_LAYOUT = 'normal';
 const DEFAULT_PAGE_WIDTH = 375;
 const DEFAULT_PAGE_HEIGHT = 679;

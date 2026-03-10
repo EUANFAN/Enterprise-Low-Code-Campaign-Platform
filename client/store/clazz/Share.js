@@ -3,7 +3,7 @@ import history from 'common/record';
 
 class Share {
   clazz = 'share';
-  @observable shareTitle = '网校就上希望学';
+  @observable shareTitle = '示例平台';
   @observable shareContent = '';
   @observable shareUrl = '';
   @observable shareImgUrl = 'https://m.xiwang.com/resource/zaowushenicon-1655691379031.png';

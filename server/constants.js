@@ -78,7 +78,7 @@ const ThemeGroupTypes = {
   NORMAL: 'normal',
 };
 
-const DEFAULT_POSTER = '//m.xiwang.com/resource/poster-1655691287397.png';
+const DEFAULT_POSTER = '//m.example.com/resource/poster-1655691287397.png';
 
 const DAY_HOURS = [
   '00:00',

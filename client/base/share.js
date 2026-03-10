@@ -10,7 +10,7 @@ export default {
   shareTitle: {
     text: '分享标题',
     type: 'NormalText',
-    value: '网校就上希望学',
+    value: '示例平台',
     useData: true
   },
   shareContent: {

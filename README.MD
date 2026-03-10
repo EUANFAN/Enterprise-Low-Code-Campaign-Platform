@@ -1,4 +1,4 @@
-# [H5](//h5.xesv5.com)
+# [H5](//h5.example.com)
 
     动态页面的可视化配置平台
 
@@ -123,11 +123,11 @@ _homebrew 由于开源协议问题下架了 mongodb，具体安装流程参照 d
     vi /etc/hosts
 
     加入以下配置:
-    127.0.0.1 h5.xesv5.com
+    127.0.0.1 h5.example.com
 
 ### 如何访问
 
-- h5.xesv5.com:8066
+- h5.example.com:8066
 
 ### 如何调试服务端
 

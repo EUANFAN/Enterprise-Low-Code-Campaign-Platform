@@ -1,5 +1,5 @@
 let COMMON_PERMISSION = {
-  TITLE: '希望学',
+  TITLE: '示例公司',
   // 编辑器区域权限
   EDITOR: {
     // 客户端

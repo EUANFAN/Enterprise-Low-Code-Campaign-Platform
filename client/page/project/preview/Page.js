@@ -51,7 +51,7 @@ class Page extends Container {
         this.onScroll(scrollTop, scrollTrigger[0].distance)
       })
     }
-    let title = '希望学'
+    let title = '示例公司'
     if (container['pageTitle']) {
       title = useDataValue(
         container.pageTitle,

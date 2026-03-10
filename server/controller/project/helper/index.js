@@ -22,7 +22,7 @@ function hasVariable(value) {
       new RegExp(PAGE_STATE_VAR_TAG_REGEX).test(value)) ||
     new RegExp(PROJECT_VARIABLE_REGEX).test(value)
   ) {
-    return '希望学'
+    return '示例公司'
   }
   return value
 }

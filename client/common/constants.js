@@ -60,7 +60,7 @@ const PAGE_HEIGHT = 603
 const LAYER_HEIGHT = 200
 const STATIC_URL = PageData.STATIC_URL
 const DEFAULT_PADDING = '0 0 0 0'
-const DOMAIN_WHITE_LIST = ['xiwang.com']
+const DOMAIN_WHITE_LIST = ['example.com']
 const WIDGET_EVENT = [
   { text: '点击', value: 'click' },
   { text: '触摸开始/鼠标按下', value: 'touchStart' },
@@ -151,13 +151,13 @@ const COMPONENT_PLATS = [
 ]
 const DefaultMiniInfo = {
   wxid: 'wx8a0885f7d58d2d02',
-  name: '希望学活动',
+  name: '示例活动',
   id: 'gh_de755964442e'
 }
 const BUSINESS_LINE_HOST = {
-  xueersi: 'm.xiwang.com',
-  xiwang: 'm.xiwang.com',
-  vipx: 'h5.vipx.com'
+  example1: 'm.example.com',
+  example2: 'm.example.com',
+  example3: 'h5.example.com'
 }
 
 export {

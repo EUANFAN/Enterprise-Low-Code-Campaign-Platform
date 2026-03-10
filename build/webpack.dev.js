@@ -7,7 +7,7 @@ const newConfig = merge(common, {
   mode: 'development',
   plugins: [
     new webpack.DefinePlugin({
-      BASE_REQ_URL: "'https://wtest.xiwang.com'"
+      BASE_REQ_URL: "'https://wtest.example.com'"
     })
   ]
 })

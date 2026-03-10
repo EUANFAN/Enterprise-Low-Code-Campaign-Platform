@@ -16,7 +16,7 @@ const instance = db();
 //   { name: '集团总部', enname: 'jtzb', queryname: ['集团总部'] },
 //   { name: '集团前台', enname: 'jtqt', queryname: ['集团前台'] },
 // ];
-const bizunitList = [{ name: '希望学', enname: 'xw', queryname: ['希望学'] }];
+const bizunitList = [{ name: '示例公司', enname: 'example', queryname: ['示例公司'] }];
 
 async function insetBizUnit() {
   let list = [];

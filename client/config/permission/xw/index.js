@@ -2,12 +2,12 @@ import CommonPermission from 'config/permission/common/index'
 import merge from 'lodash/merge'
 
 let XUEERSI_PERMISSION = merge(CommonPermission, {
-  TITLE: '希望学',
+  TITLE: '示例公司',
   EDITOR: {
     // 客户端
     ClIENT: [
       {
-        text: '希望学客户端',
+        text: '示例客户端',
         // TODO: 目前未知作用.
         value: 'jzh'
       },
