@@ -4,53 +4,80 @@ A powerful visual configuration platform for building dynamic H5 campaign pages.
 
 ## Overview
 
-The platform provides a comprehensive solution for:
+> A comprehensive visual configuration platform for building dynamic H5 campaign pages
 
-- **Visual Page Building**: Intuitive drag-and-drop editor for designing H5 pages
-- **Component Management**: Rich library of pre-built UI components and widgets
-- **Behavior Configuration**: Configure interactive behaviors and animations without coding
-- **Template System**: Create and manage reusable page templates and components
-- **Theme Customization**: Flexible theming system with customizable styles
-- **Multi-user Collaboration**: Role-based access control for team workflows
-- **Publish Management**: Version control and publish workflows with audit trails
+### Key Capabilities
+
+| Feature | Description |
+|---------|-------------|
+| **Visual Page Building** | Intuitive drag-and-drop editor for designing H5 pages |
+| **Component Management** | Rich library of pre-built UI components and widgets |
+| **Behavior Configuration** | Configure interactive behaviors and animations without coding |
+| **Template System** | Create and manage reusable page templates and components |
+| **Theme Customization** | Flexible theming system with customizable styles |
+| **Multi-user Collaboration** | Role-based access control for team workflows |
+| **Publish Management** | Version control and publish workflows with audit trails |
 
 ## Tech Stack
 
-- **Frontend**: React, MobX (State Management), Ant Design (UI Framework)
-- **Backend**: Koa (Node.js Framework)
-- **Database**: MongoDB (Primary Database), Redis (Caching & Sessions)
-- **Build Tools**: Webpack (Bundler), Babel (Transpiler)
-- **Code Quality**: ESLint, Prettier, Husky (Git Hooks)
+| Category | Technologies |
+|----------|--------------|
+| **Frontend** | React, MobX, Ant Design |
+| **Backend** | Koa |
+| **Database** | MongoDB, Redis |
+| **Build Tools** | Webpack, Babel |
+| **Code Quality** | ESLint, Prettier, Husky |
+
+---
 
 ## Features
 
-### Visual Editor
+### Visual Editor :art:
+
+| Capability | Details |
+|-----------|---------|
+| Canvas | Drag-and-drop canvas for page layout |
+| Preview | Real-time preview of H5 pages |
+| Layers | Multi-layer component management |
+| History | Undo/redo support |
+| Shortcuts | Keyboard shortcuts |
+
+### Component Library :package:
 - Drag-and-drop canvas for page layout
 - Real-time preview of H5 pages
 - Multi-layer component management
 - Undo/redo support
 - Keyboard shortcuts
 
-### Component Library
-- **Basic Components**: Text, Image, Rich Text, Container
-- **Form Components**: Input, Select, Button, Card
-- **Media Components**: Video, Audio, Carousel
-- **Layout Components**: Grid, Flex, Layer
-- **Data Display**: List, Table, Chart
+### Component Library :package:
 
-### Behavior Triggers
-- **Navigation**: Page jump, scroll to anchor, deep linking
-- **User Interaction**: Click, Long press, Swipe gestures
-- **Data Actions**: Form submission, API calls, State changes
-- **Animations**: Entrance animations, Transition effects
-- **Conditional Logic**: Show/hide based on conditions
+| Category | Components |
+|----------|------------|
+| **Basic Components** | Text, Image, Rich Text, Container |
+| **Form Components** | Input, Select, Button, Card |
+| **Media Components** | Video, Audio, Carousel |
+| **Layout Components** | Grid, Flex, Layer |
+| **Data Display** | List, Table, Chart |
 
-### System Management
-- **Project Management**: Create, edit, copy, delete projects
-- **Template Management**: Save and reuse page templates
-- **Theme Management**: Custom themes and global styles
-- **User & Role Management**: Permission control system
-- **Resource Management**: Image, video, file upload and management
+### Behavior Triggers :zap:
+
+| Type | Capabilities |
+|------|--------------|
+| **Navigation** | Page jump, scroll to anchor, deep linking |
+| **User Interaction** | Click, Long press, Swipe gestures |
+| **Data Actions** | Form submission, API calls, State changes |
+| **Animations** | Entrance animations, Transition effects |
+| **Conditional Logic** | Show/hide based on conditions |
+
+### System Management :gear:
+
+| Module | Features |
+|--------|----------|
+| **Project Management** | Create, edit, copy, delete projects |
+| **Template Management** | Save and reuse page templates |
+| **Theme Management** | Custom themes and global styles |
+| **User & Role Management** | Permission control system |
+| **Resource Management** | Image, video, file upload and management |
 
 ## Getting Started
 
